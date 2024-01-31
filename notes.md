@@ -1,9 +1,7 @@
 # Ch. 2 Introduction To Database Design
-Data Independence
-
-Efficient Data Access
-
-Data Integrity
+#### Data Independence
+#### Efficient Data Access
+#### Data Integrity
 - Make sure you are meeting the application requirements
 - Security
   - Different tiers of access levels (for enterprise tools)
@@ -13,7 +11,7 @@ Data Integrity
   - Backup database
 - Reducing fundamental application development time by using standard tools
 
-ACID
+### ACID
 - Atomicity
   - When you split something into a transaction, its all or nothing (database is exactly how you left it)
 - Consistency
@@ -25,11 +23,11 @@ ACID
 - Durability 
   - Related to recovery stuff mentioned above
 
-Data Models
+##### Data Models
 - Relational data models
 - _______ data model (?)
 
-Entity Relationship (ER) Diagrams
+### Entity Relationship (ER) Diagrams
 - Entry (CAPS)
   - Object 
 - Attribute (lowercase)
@@ -42,13 +40,13 @@ Entity Relationship (ER) Diagrams
   - Dependents of an employee 
   - When employee leaves, their dependents and policy are destroyed
 
-Diagram
+Diagram 1
 
     +---------+     +---------+    +---------+                                +------+    +-------+  +--------+
-    |         |     |         |    |         |             +---------+        |      |    |       |  |        |
-    |   ssn   |     |   name  |    |   dob   |             |  since  |        | name |    |  did  |  | budget |
-    |   ---   |     |         |    |         |             +----+----+        |      |    |  ---  |  |        |
-    +-----+---+     +----+----+    +-----+---+                  |             +----+-+    +--+----+  +-+------+
+    |         |     |         |    |         |           +---------+          |      |    |       |  |        |
+    |   ssn   |     |   name  |    |   dob   |           |  since  |          | name |    |  did  |  | budget |
+    |   ---   |     |         |    |         |           +----+----+          |      |    |  ---  |  |        |
+    +-----+---+     +----+----+    +-----+---+                |               +----+-+    +--+----+  +-+------+
         |              |               |                     / \                 |         |         |
         |              |               |                    /   \                |         |         |
     +---+--------------+---------------+----+              /     \             +-+---------+----+    |
@@ -60,13 +58,13 @@ Diagram
     |                                       |               \   /              +----------------+
     |                                       |                \ /
     +---------+------------------+----------+                 |
-            |                  |                            |
-    Supervisor|                  |Subordinate                 |
-            |                  |                      +-----+-----+
-            |                  |          +---------+ |           |   +----------+
-            |        / \       |          | address +-+ LOCATIONS +---+ capacity |
-            |       /   \      |          +---------+ |           |   +----------+
-            +------/     \-----+                      +-----------+
+            |                  |                              |
+    Supervisor|                |Subordinate                   |
+            |                  |                        +-----+-----+
+            |                  |            +---------+ |           |   +----------+
+            |        / \       |            | address +-+ LOCATIONS +---+ capacity |
+            |       /   \      |            +---------+ |           |   +----------+
+            +------/     \-----+                        +-----------+
                   /       \
                  / REPORTS \
                  \    TO   /
@@ -76,7 +74,11 @@ Diagram
                      \ /
 
 
-Bolded lines and Arrows
+#### Bolded lines (double lines) and Arrows
+
+Arrows mean that given a DEPARTMENTS entity, we can uniquely determine the MANAGES relationship because each MANAGES relationship has exactly one DEPARTMENTS entity
+
+Bolded lines (double lines) indicate that the participation of an entity set in a relationship set is total
 
 
     +---------+     +---------+    +---------+                                +------+    +-------+  +--------+
@@ -110,7 +112,10 @@ Bolded lines and Arrows
                     \   /
                      \ /
 
-Weak entities (dependents) and partial keys
+#### Weak entities (dependents) and partial keys
+Dependents are weak entities and each weak entity must have total participation in the indentifying relationship set. Each weak entity therefore has an identifying owner (depicted with bold lines (double))
+
+Partial keys are keys that are identifying given another attribute. In this case, Dependents are identied uniquely with the pname of the Dependent AND the key of the owning Employees entity. 
 
         +---------+
         |         |
@@ -142,3 +147,28 @@ Weak entities (dependents) and partial keys
     | - - - - |   |         |
     +---------+   +---------+
 
+More examples in the textbook
+
+### Class Hierarchy
+
+ISA (pronounced "is a")
+  - Hourly employees and contract employees inherit from EMPLOYEES 
+  - Think of this as subclasses
+#### Constraints 
+- Overlap contraints determine whether two subclasses can contain the same entity
+  - Ex: Senior employee and contract employee (overlap allowed) vs. contract employee and hourly employee (overlap not allowed)
+- Covering constraints determine whether the entities in the subclasses exhaust all entities in the superclass
+  - Ex: does every EMPLOYEEs entity belong to one of the subclasses? (no, so there is no covering constraint)
+
+#### Aggregation
+
+### Binary vs. Ternary Relationships
+#### Requirements
+1. A policy can only be owned by at most 1 employee
+2. Every policy must be owned by at least 1 employee
+3. Policy is linked to dependents (each dependent is uniquely identified with pname (weak identifier) AND policy_id of policy)
+
+Re: Figure 2.18 Policy Revisited
+Employee purchases a policy and the policy covers the dependents
+
+Getting rid of the ternery relationship made this diagram clearer
