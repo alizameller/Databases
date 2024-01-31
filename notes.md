@@ -1,4 +1,4 @@
-# Notes
+# Ch. 2 Introduction To Database Design
 Data Independence
 
 Efficient Data Access
