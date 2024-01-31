@@ -172,3 +172,31 @@ Re: Figure 2.18 Policy Revisited
 Employee purchases a policy and the policy covers the dependents
 
 Getting rid of the ternery relationship made this diagram clearer
+
+### Docker Containers and Postgres
+Note for running postgres in Docker container - use the following command instead of `postgres`:
+
+`docker exec -ti databases-course psql -U postgres`
+
+To create table:
+```
+postgres=# CREATE TABLE accounts ( 
+    user_id SERIAL PRIMARY KEY, 
+    username VARCHAR (50) UNIQUE NOT NULL, 
+    password VARCHAR (50) NOT NULL, 
+    email VARCHAR (255) UNIQUE NOT NULL, 
+    created_at TIMESTAMP NOT NULL, 
+    last_login TIMESTAMP);
+```
+To insert accounts:
+```
+postgres=# insert into accounts (username, password, email, created_at) VALUES ('testusername', 'password', 'hello@world.com', NOW());
+``````
+To get number of accounts:
+```
+postgres=# select COUNT(*) from accounts
+```
+To get accounts with condition:
+```
+postgres=# select * from accounts where user_id > 4
+```
