@@ -1,5 +1,5 @@
 02/06/24
-# Relational Algebra
+# Relational Model
 
 ### Relations
 - An instance of a relation is a set of tuples (also called records), specifying the rows of the table
@@ -28,3 +28,28 @@ Values:
 - Transaction 
   - Atomicity is key in databases, so transactions allow for multi-step operations to be carried out in full, not half way
 - SELECT is a query statement 
+  - Does not require WHERE statement
+  - Can return tuples
+  - Can query multiple tables (example bellow)
+    ```
+    SELECT S.name, E.cid
+    FROM Students S, Enrolled E
+    WHERE S.sid = E.studid AND E.grade = 'A'
+    ```
+    - Note that this can return a student's name multiple times because a student can get an A in multiple courses
+
+### Converting ER Diagrams to an SQL TABLE
+See Figure 3.10 below
+![figure 3.10](fig_3_10-1.png)
+```
+CREATE TABLE Works_In( ssn CHAR(11),
+                did INTEGER, 
+                address CHAR(20),
+                since DATE,
+                PRIMARY KEY (ssn, did, address),
+                FOREIGN KEY (ssn) REFERENCES EMPLOYEES,
+                FOREIGN KEY (did) REFERENCES DEPARTMENTS
+                FOREIGN KEY (address) REFERENCES LOCATION
+)
+```
+- 
