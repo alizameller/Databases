@@ -40,7 +40,9 @@ Values:
 
 ### Converting ER Diagrams to an SQL TABLE
 See Figure 3.10 below
-![figure 3.10](fig_3_10-1.png)
+
+<img width="630" alt="fig_3_10" src="https://github.com/alizameller/Databases/assets/49292194/6176b3cc-62ee-4343-b212-1962ae3bd578">
+
 ```
 CREATE TABLE Works_In( ssn CHAR(11),
                 did INTEGER, 
