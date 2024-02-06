@@ -27,3 +27,4 @@ Values:
 - SET DEFAULT can be used in place of CASCADE which would switch the foreign key to a default student (default is specified in creation of the table)
 - Transaction 
   - Atomicity is key in databases, so transactions allow for multi-step operations to be carried out in full, not half way
+- SELECT is a query statement 
