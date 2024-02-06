@@ -1,3 +1,4 @@
+01/30/24
 # Ch. 2 Introduction To Database Design
 #### Data Independence
 #### Efficient Data Access
@@ -173,6 +174,7 @@ Employee purchases a policy and the policy covers the dependents
 
 Getting rid of the ternery relationship made this diagram clearer
 
+# Docker and SQL
 ### Docker Containers and Postgres
 Note for running postgres in Docker container - use the following command instead of `postgres`:
 
@@ -200,3 +202,7 @@ To get accounts with condition:
 ```
 postgres=# select * from accounts where user_id > 4
 ```
+
+SERIAL is an auto-incrementing integer
+
+NULL is an optional field
