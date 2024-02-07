@@ -18,7 +18,7 @@ DML: Data Manipulation Language
 Integrity Constraints (IC) - Things that will give you errors:
 - Domain constraints: Data types
 - Key constraint: a candidate key which is a minimal subset of fields of a relation that is a unique identifier of a tuple
-  - Foreign key: you cannot access the data if you do not have a matching primary key of the referenced relation (can be explicitly used with keyword FOREIGN KEY or abstractly)
+  - Foreign key: you cannot access the data if you do not have a matching primary key of the referenced relation (can be explicitly used with keyword FOREIGN KEY or abstractly). FOREIGN KEYs can be NULL
 
 Values:
 - SERIAL is an auto-incrementing integer
@@ -44,14 +44,44 @@ See Figure 3.10 below
 <img width="630" alt="fig_3_10" src="https://github.com/alizameller/Databases/assets/49292194/6176b3cc-62ee-4343-b212-1962ae3bd578">
 
 ```
-CREATE TABLE Works_In( ssn CHAR(11),
-                did INTEGER, 
-                address CHAR(20),
-                since DATE,
-                PRIMARY KEY (ssn, did, address),
-                FOREIGN KEY (ssn) REFERENCES EMPLOYEES,
-                FOREIGN KEY (did) REFERENCES DEPARTMENTS
-                FOREIGN KEY (address) REFERENCES LOCATION
+CREATE TABLE Works_In( ssn      CHAR(11),
+                       did      INTEGER, 
+                       address  CHAR(20),
+                       since    DATE,
+                       PRIMARY KEY (ssn, did, address),
+                       FOREIGN KEY (ssn) REFERENCES Employees,
+                       FOREIGN KEY (did) REFERENCES Departments,
+                       FOREIGN KEY (address) REFERENCES Location
 )
 ```
-- 
+
+See Figure 3.13 for table creation below 
+```
+CREATE TABLE Dept_Mgr ( did     INTEGER,
+                        dname   CHAR(20),
+                        budget  REAL,
+                        ssn     CHAR(11) NOT NULL,
+                        since   DATE,
+                        PRIMARY KEY (did),
+                        FOREIGN KEY (ssn) REFERENCES Employees
+                            ON DELETE NO ACTION
+)
+```
+- If we had cascade, then if we deleted the employee, we would also destroy the entire department
+
+Views
+- A view is a base table for defining new queries or views(like an abstract query)
+- Similar to `SELECT * from STUDENTS`
+- Benefit of views is portability and security
+  - Allows for access control because views are read only
+
+DROP TABLE
+- Destroys the table by deleting all rows and removing table definition information
+  
+ALTER TABLE
+  - Modifies the structure of an existing table. It can be used to add or delete columns or integrity constrants
+  - Example: Adding a column called maiden-name to Students
+  ```
+  ALTER TABLE Students
+        ADD COLUMN maiden-name CHAR(10)
+  ```
