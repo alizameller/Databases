@@ -1,5 +1,5 @@
 02/06/24
-# Relational Model
+# Ch. 3 Relational Models
 
 ### Relations
 - An instance of a relation is a set of tuples (also called records), specifying the rows of the table
