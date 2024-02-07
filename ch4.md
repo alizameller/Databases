@@ -91,7 +91,12 @@ Answer:
 
 1. π<sub>sname</sub>(S ⨝ R)
 
-#### Question 5: Find the names of sailors who have reserved a red or green  boat?
+#### Question 5: Find the names of sailors who have reserved a red or green boat?
 Answer:
 
 1. π<sub>sname</sub>(σ <sub>color = red v color = green</sub>(B)) ⨝ S ⨝ R
+   
+#### Question 5: Find the names of sailors who have reserved a red and green boat?
+Answer:
+
+1. π<sub>sname</sub>(σ <sub>color = red ∧ color = green</sub>(B)) ⨝ S ⨝ R
