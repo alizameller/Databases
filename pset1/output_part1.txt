@@ -1,0 +1,102 @@
+/* Question 1 */
+        bname         | bid | count 
+----------------------+-----+-------
+ Interlake            | 101 |     2
+ Interlake            | 102 |     3
+ Clipper              | 103 |     3
+ Clipper              | 104 |     5
+ Marine               | 105 |     3
+ Marine               | 106 |     3
+ Marine               | 107 |     1
+ Driftwood            | 108 |     1
+ Driftwood            | 109 |     4
+ Klapser              | 110 |     3
+ Sooney               | 111 |     1
+ Sooney               | 112 |     1
+(12 rows)
+
+/* Question 2 */
+ sid | sname 
+-----+-------
+(0 rows)
+
+/* Question 3 */
+  sname   | sid 
+----------+-----
+ shaun    |  62
+ emilio   |  23
+ ossola   |  61
+ scruntus |  24
+ figaro   |  35
+(5 rows)
+
+/* Question 4 */
+        bname         | bid | count 
+----------------------+-----+-------
+ Clipper              | 104 |     5
+(1 row)
+
+/* Question 5 */
+ sid |  sname  
+-----+---------
+  74 | horatio
+  90 | vin
+  60 | jit
+(3 rows)
+
+/* Question 6 */
+         avg         
+---------------------
+ 35.0000000000000000
+(1 row)
+
+/* Question 7 */
+  sname   | sid | rating | age 
+----------+-----+--------+-----
+ scruntus |  24 |      1 |  33
+ brutus   |  29 |      1 |  33
+ art      |  85 |      3 |  25
+ dye      |  89 |      3 |  25
+ horatio  |  64 |      7 |  16
+ ossola   |  61 |      7 |  16
+ andy     |  32 |      8 |  25
+ stum     |  59 |      8 |  25
+ dan      |  88 |      9 |  25
+ horatio  |  74 |      9 |  25
+ jit      |  60 |     10 |  35
+ zorba    |  71 |     10 |  35
+ shaun    |  62 |     10 |  35
+ rusty    |  58 |     10 |  35
+(14 rows)
+
+/* Question 8 */
+ bid | sid |  sname   | count | maximum 
+-----+-----+----------+-------+---------
+ 101 |  22 | dusting  |     1 |       1
+ 101 |  64 | horatio  |     1 |       1
+ 102 |  22 | dusting  |     1 |       1
+ 102 |  31 | lubber   |     1 |       1
+ 102 |  64 | horatio  |     1 |       1
+ 103 |  22 | dusting  |     1 |       1
+ 103 |  31 | lubber   |     1 |       1
+ 103 |  74 | horatio  |     1 |       1
+ 104 |  22 | dusting  |     1 |       1
+ 104 |  23 | emilio   |     1 |       1
+ 104 |  24 | scruntus |     1 |       1
+ 104 |  31 | lubber   |     1 |       1
+ 104 |  35 | figaro   |     1 |       1
+ 105 |  23 | emilio   |     1 |       1
+ 105 |  35 | figaro   |     1 |       1
+ 105 |  59 | stum     |     1 |       1
+ 106 |  60 | jit      |     2 |       2
+ 107 |  88 | dan      |     1 |       1
+ 108 |  89 | dye      |     1 |       1
+ 109 |  59 | stum     |     1 |       1
+ 109 |  60 | jit      |     1 |       1
+ 109 |  89 | dye      |     1 |       1
+ 109 |  90 | vin      |     1 |       1
+ 110 |  88 | dan      |     2 |       2
+ 111 |  88 | dan      |     1 |       1
+ 112 |  61 | ossola   |     1 |       1
+(26 rows)
+

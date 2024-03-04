@@ -1,0 +1,83 @@
+/* Question 1 */
+SELECT B.bname, B.bid, COUNT(*) 
+FROM boats as B 
+INNER JOIN reserves as R ON R.bid = B.bid
+GROUP BY B.bid
+ORDER BY B.bid ASC; 
+
+/* Question 2 */
+SELECT R.sid, S.sname
+FROM reserves R
+INNER JOIN boats B ON R.bid = B.bid
+INNER JOIN sailors S on R.sid = S.sid
+WHERE B.color = 'red'
+GROUP BY R.sid, S.sname
+HAVING COUNT(DISTINCT R.bid) = (SELECT COUNT(*)
+                                FROM boats B
+                                WHERE B.color = 'red'); 
+
+/* Question 3 */
+WITH sailor_color_table AS (SELECT R.sid, S.sname, B.color
+                            FROM reserves R
+                            INNER JOIN boats B ON R.bid = B.bid
+                            INNER JOIN sailors S on R.sid = S.sid), 
+sailors_red_count AS (SELECT sailor_color_table.sid, sailor_color_table.sname, COUNT(*)
+                      FROM sailor_color_table
+                      GROUP BY sailor_color_table.sid, sailor_color_table.sname, sailor_color_table.color
+                      HAVING sailor_color_table.color = 'red')
+SELECT SCT.sname, SCT.sid
+FROM sailors_red_count SRC
+INNER JOIN sailor_color_table SCT on SCT.sid = SRC.sid
+GROUP BY SCT.sid, SCT.sname, SRC.count
+HAVING COUNT(SCT.sname) = SRC.count; 
+
+/* Question 4 */
+SELECT B.bname, B.bid, COUNT(R.bid)
+FROM boats B
+INNER JOIN reserves R ON R.bid = B.bid
+GROUP BY B.bname, B.bid
+ORDER BY COUNT(R.bid) DESC
+LIMIT 1; 
+
+/* Question 5 */
+SELECT S.sid, S.sname
+FROM sailors S
+INNER JOIN reserves R on S.sid = R.sid
+WHERE S.sid IN (SELECT R.sid 
+                FROM reserves R)
+EXCEPT
+SELECT S.sid, S.sname
+FROM sailors S
+WHERE S.sid IN (SELECT R.sid 
+                FROM reserves R 
+                INNER JOIN boats B ON R.bid = B.bid
+                WHERE B.color = 'red');
+
+/* Question 6 */
+WITH sailors_rated10 AS (SELECT S.sid, S.sname, S.age
+                    FROM sailors S
+                    WHERE S.rating = 10)
+SELECT AVG(S.age)
+FROM sailors_rated10 S; 
+
+/* Question 7 */
+WITH youngest AS (SELECT S.sid, S.sname, S.age, S.rating, MIN(S.age) 
+                  OVER (PARTITION BY S.rating) 
+                  AS YoungestSailor FROM sailors S)
+SELECT Y.sname, Y.sid, Y.rating, Y.age
+FROM youngest Y
+WHERE Y.age = Y.youngestsailor;
+
+/* Question 8 */
+WITH num_reserves_per_boat AS (SELECT R.bid, S.sid, S.sname, COUNT(*)
+                                FROM sailors S
+                                INNER JOIN reserves R ON S.sid = R.sid
+                                GROUP BY R.bid, S.sid, S.sname
+                                ORDER BY R.bid)
+SELECT * 
+FROM 
+    (SELECT N.bid, N.sid, N.sname, N.count, MAX(N.count) 
+    OVER (PARTITION BY N.bid) 
+    AS maximum FROM num_reserves_per_boat N) AS temp
+WHERE temp.maximum = temp.count;
+
