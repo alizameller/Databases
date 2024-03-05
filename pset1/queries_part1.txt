@@ -23,8 +23,8 @@ WITH sailor_color_table AS (SELECT R.sid, S.sname, B.color
                             INNER JOIN sailors S on R.sid = S.sid), 
 sailors_red_count AS (SELECT sailor_color_table.sid, sailor_color_table.sname, COUNT(*)
                       FROM sailor_color_table
-                      GROUP BY sailor_color_table.sid, sailor_color_table.sname, sailor_color_table.color
-                      HAVING sailor_color_table.color = 'red')
+                      WHERE sailor_color_table.color = 'red'
+                      GROUP BY sailor_color_table.sid, sailor_color_table.sname)
 SELECT SCT.sname, SCT.sid
 FROM sailors_red_count SRC
 INNER JOIN sailor_color_table SCT on SCT.sid = SRC.sid
@@ -72,9 +72,8 @@ WHERE Y.age = Y.youngestsailor;
 WITH num_reserves_per_boat AS (SELECT R.bid, S.sid, S.sname, COUNT(*)
                                 FROM sailors S
                                 INNER JOIN reserves R ON S.sid = R.sid
-                                GROUP BY R.bid, S.sid, S.sname
-                                ORDER BY R.bid)
-SELECT * 
+                                GROUP BY R.bid, S.sid, S.sname)
+SELECT bid, sid, sname, count 
 FROM 
     (SELECT N.bid, N.sid, N.sname, N.count, MAX(N.count) 
     OVER (PARTITION BY N.bid) 

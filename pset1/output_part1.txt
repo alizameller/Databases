@@ -70,33 +70,33 @@
 (14 rows)
 
 /* Question 8 */
- bid | sid |  sname   | count | maximum 
------+-----+----------+-------+---------
- 101 |  22 | dusting  |     1 |       1
- 101 |  64 | horatio  |     1 |       1
- 102 |  22 | dusting  |     1 |       1
- 102 |  31 | lubber   |     1 |       1
- 102 |  64 | horatio  |     1 |       1
- 103 |  22 | dusting  |     1 |       1
- 103 |  31 | lubber   |     1 |       1
- 103 |  74 | horatio  |     1 |       1
- 104 |  22 | dusting  |     1 |       1
- 104 |  23 | emilio   |     1 |       1
- 104 |  24 | scruntus |     1 |       1
- 104 |  31 | lubber   |     1 |       1
- 104 |  35 | figaro   |     1 |       1
- 105 |  23 | emilio   |     1 |       1
- 105 |  35 | figaro   |     1 |       1
- 105 |  59 | stum     |     1 |       1
- 106 |  60 | jit      |     2 |       2
- 107 |  88 | dan      |     1 |       1
- 108 |  89 | dye      |     1 |       1
- 109 |  59 | stum     |     1 |       1
- 109 |  60 | jit      |     1 |       1
- 109 |  89 | dye      |     1 |       1
- 109 |  90 | vin      |     1 |       1
- 110 |  88 | dan      |     2 |       2
- 111 |  88 | dan      |     1 |       1
- 112 |  61 | ossola   |     1 |       1
+ bid | sid |  sname   | count 
+-----+-----+----------+-------
+ 101 |  22 | dusting  |     1
+ 101 |  64 | horatio  |     1
+ 102 |  22 | dusting  |     1
+ 102 |  31 | lubber   |     1
+ 102 |  64 | horatio  |     1
+ 103 |  22 | dusting  |     1
+ 103 |  31 | lubber   |     1
+ 103 |  74 | horatio  |     1
+ 104 |  22 | dusting  |     1
+ 104 |  23 | emilio   |     1
+ 104 |  24 | scruntus |     1
+ 104 |  31 | lubber   |     1
+ 104 |  35 | figaro   |     1
+ 105 |  23 | emilio   |     1
+ 105 |  35 | figaro   |     1
+ 105 |  59 | stum     |     1
+ 106 |  60 | jit      |     2
+ 107 |  88 | dan      |     1
+ 108 |  89 | dye      |     1
+ 109 |  59 | stum     |     1
+ 109 |  60 | jit      |     1
+ 109 |  89 | dye      |     1
+ 109 |  90 | vin      |     1
+ 110 |  88 | dan      |     2
+ 111 |  88 | dan      |     1
+ 112 |  61 | ossola   |     1
 (26 rows)
 
