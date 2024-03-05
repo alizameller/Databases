@@ -3,11 +3,14 @@ Sailors and Boats lecture script
 @eugsokolov
 Modified for PSET1
 @alizameller
+
+Invoke using:
+$ pytest -s sailors.py
 '''
 from __future__ import print_function
 import pytest
 from ipdb import set_trace
-from sqlalchemy import create_engine, text, Integer, String, Column, DateTime, ForeignKey, PrimaryKeyConstraint, func
+from sqlalchemy import create_engine, text, Integer, String, Column, DateTime, ForeignKey, PrimaryKeyConstraint, func, select
 from sqlalchemy.orm import sessionmaker, declarative_base, backref, relationship
 
 Base = declarative_base()
@@ -150,3 +153,72 @@ def test_question6():
     output = s.query(func.avg(sailors_rated_10.c.age)).all()
     
     assert output[0][0] == 35.0000000000000000
+
+def test_question7():
+    youngest = s.query(
+        Sailor.sid,
+        Sailor.sname, 
+        Sailor.age,
+        Sailor.rating,
+        func.min(Sailor.age).over(
+            partition_by=Sailor.rating).label('youngestsailor')).subquery()
+    
+    output = s.query(
+        youngest.c.sname,
+        youngest.c.sid,
+        youngest.c.rating,
+        youngest.c.age).where(youngest.c.age == youngest.c.youngestsailor).all()
+    
+    snames = []
+    sids = []
+    ages = []
+    ratings = []
+    for row in output:
+        snames.append(row[0].replace('\t', ' ').strip())
+        sids.append(row[1])
+        ratings.append(row[2])
+        ages.append(row[3])
+
+    expected_sname = ['scruntus', 'brutus', 'art', 'dye', 'horatio', 'ossola', 'andy', 'stum', 'dan', 'horatio', 'jit', 'zorba', 'shaun', 'rusty']
+    expected_sid = [24, 29, 85, 89, 64, 61, 32, 59, 88, 74, 60, 71, 62, 58]
+    expected_ratings = [1, 1, 3, 3, 7, 7, 8, 8, 9, 9, 10, 10, 10, 10]
+    expected_ages = [33, 33, 25, 25, 16, 16, 25, 25, 25, 25, 35, 35, 35, 35]
+
+    assert (snames.sort(), sids.sort(), ages.sort(), ratings.sort()) == (expected_sname.sort(), expected_sid.sort(), expected_ratings.sort(), expected_ages.sort())
+
+def test_question8():
+    num_reserves_per_boat = s.query(
+    Reservation.bid,
+    Sailor.sid, 
+    Sailor.sname, 
+    func.count()).join(Reservation).group_by(Reservation.bid, Sailor.sid, Sailor.sname).order_by(Reservation.bid).cte("num_reserves_per_boat")
+    
+    highest_num_res = s.query(
+        num_reserves_per_boat.c.bid,
+        num_reserves_per_boat.c.sid,
+        num_reserves_per_boat.c.sname, 
+        num_reserves_per_boat.c.count.label('count'),
+        func.max(num_reserves_per_boat.c.count).over(
+            partition_by=num_reserves_per_boat.c.bid).label('maximum')).subquery()
+
+    output = s.query(highest_num_res).where(highest_num_res.c.maximum == highest_num_res.c.count).all()
+    
+    bids = []
+    sids = []
+    snames = []
+    counts = []
+    maximums = []
+    for row in output:
+        bids.append(row[0])
+        sids.append(row[1])
+        snames.append(row[2].replace('\t', ' ').strip())
+        counts.append(row[3])
+        maximums.append(row[4])
+
+    expected_bids = [101, 101, 102, 102, 102, 103, 103, 103, 104, 104, 104, 104, 104, 105, 105, 105, 106, 107, 108, 109, 109, 109, 109, 110, 111, 112]
+    expected_sids = [22, 64, 22, 31, 64, 22, 31, 74, 22, 23, 24, 31, 35, 23, 35, 59, 60, 88, 89, 59, 60, 89, 90, 88, 88, 61]
+    expected_snames = ['dusting', 'horatio', 'dusting', 'lubber', 'horatio', 'dusting', 'lubber', 'horatio', 'dusting', 'emilio', 'scruntus', 'lubber', 'figaro', 'emilio', 'figaro', 'stum', 'jit', 'dan', 'dye', 'stum', 'jit', 'dye', 'vin', 'dan', 'dan', 'ossola']
+    expected_counts = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 2, 1, 1]
+    expected_maximums = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 2, 1, 1]
+
+    assert (bids.sort(), sids.sort(), snames.sort(), counts.sort(), maximums.sort()) == (expected_bids.sort(), expected_sids.sort(), expected_snames.sort(), expected_counts.sort(), expected_maximums.sort())
