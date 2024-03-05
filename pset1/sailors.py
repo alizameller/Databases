@@ -1,27 +1,15 @@
 '''
 Sailors and Boats lecture script
 @eugsokolov
+Modified for PSET1
+@alizameller
 '''
 from __future__ import print_function
+import pytest
 from ipdb import set_trace
+from sqlalchemy import create_engine, text, Integer, String, Column, DateTime, ForeignKey, PrimaryKeyConstraint, func
+from sqlalchemy.orm import sessionmaker, declarative_base, backref, relationship
 
-from sqlalchemy import create_engine, text
-
-## Feel free to change the connection string to your own database.
-
-# engine = create_engine(
-#       "mysql+pymysql://eugene:@localhost/sailors?host=localhost?port=3306", echo=True)
-#engine = create_engine('postgresql+psycopg2://postgres:mysecretpassword@localhost:5440/test', echo=True)
-engine = create_engine(
-    "postgresql://alizameller:@localhost:5432/postgres", echo=True)
-
-conn = engine.connect()
-print(conn.execute(text("SELECT COUNT(*) from sailors")).fetchall())
-
-# # set_trace()
-
-from sqlalchemy.orm import declarative_base
-from sqlalchemy import Integer, String, Column, DateTime
 Base = declarative_base()
 
 class Sailor(Base):
@@ -34,43 +22,6 @@ class Sailor(Base):
 
     def __repr__(self):
         return "<Sailor(id=%s, name='%s', rating=%s)>" % (self.sid, self.sname, self.age)
-
-# tmp = Sailor(sid=99, sname='joe', rating=7, age=25)
-# print(tmp)
-
-from sqlalchemy.orm import sessionmaker
-session = sessionmaker(bind=engine)
-s = session()
-
-# s.add(tmp)
-
-# set_trace()  # joe is "pending"
-
-# s.commit()
-
-# set_trace()
-
-# tmp.rating = 8
-print('session is dirty?', s.dirty)
-
-# set_trace()
-
-s.commit()
-
-# set_trace()
-
-sailors = s.query(Sailor)
-print(type(sailors), sailors)
-
-# set_trace()
-
-for i in sailors:
-    print(i)
-
-# set_trace()
-
-from sqlalchemy import ForeignKey
-from sqlalchemy.orm import backref, relationship
 
 class Boat(Base):
     __tablename__ = 'boats'
@@ -86,8 +37,6 @@ class Boat(Base):
     def __repr__(self):
         return "<Boat(id=%s, name='%s', color=%s)>" % (self.bid, self.bname, self.color)
 
-from sqlalchemy import PrimaryKeyConstraint
-
 class Reservation(Base):
     __tablename__ = 'reserves'
     __table_args__ = (PrimaryKeyConstraint('sid', 'bid', 'day'), {})
@@ -101,8 +50,103 @@ class Reservation(Base):
     def __repr__(self):
         return "<Reservation(sid=%s, bid=%s, day=%s)>" % (self.sid, self.bid, self.day)
 
-for i in s.query(Reservation):
-    print(i)
+engine = create_engine(
+    "postgresql://alizameller:@localhost:5432/postgres_copy")
+Session = sessionmaker(bind=engine)
+s = Session()
 
-# set_trace()
+def test_question1():
+    output = s.query(
+        Boat.bname, 
+        Boat.bid, 
+        func.count()).join(Reservation).group_by(Boat.bid).order_by(Boat.bid.asc()).all()
+    
+    bnames = [] 
+    bids = []
+    count = []
+    for row in output:
+        bnames.append(row[0].replace('\t', ' ').strip())
+        bids.append(row[1])
+        count.append(row[2])
 
+    expected_bname = ['Interlake', 'Interlake', 'Clipper', 'Clipper', 'Marine', 'Marine', 'Marine', 'Driftwood', 'Driftwood', 'Klasper', 'Sooney', 'Sooney']
+    expected_bid = [101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112]
+    expected_count = [2, 3, 3, 5, 3, 3, 1, 1, 4, 3, 1, 1]
+
+    assert (bnames.sort(), bids.sort(), count.sort()) == (expected_bname.sort(), expected_bid.sort(), expected_count.sort())
+
+def test_question2():
+    count = (s.query(func.count()).where(Boat.color == 'red').all())[0][0]
+    output = s.query(
+        Reservation.sid, 
+        Sailor.sname).join(Boat).join(Sailor).where(Boat.color == 'red').group_by(Reservation.sid, Sailor.sname).having(func.count(Reservation.bid) == count).all()
+
+    assert output == []
+
+def test_question3():
+    sct = s.query(
+    Reservation.sid,
+    Sailor.sname, 
+    Boat.color).join(Boat).join(Sailor).cte("sct")
+    
+    src = s.query(
+        sct.c.sid, 
+        sct.c.sname, 
+        func.count()).group_by(sct.c.sid, 
+                               sct.c.sname, 
+                               sct.c.color).having(sct.c.color == 'red').cte("src")
+
+    output = s.query(sct.c.sname, sct.c.sid).select_from(src).join(sct, src.c.sid == sct.c.sid).group_by(sct.c.sid, sct.c.sname, src.c.count).having(func.count(sct.c.sname) == src.c.count).all()
+    
+    snames = [] 
+    sids = []
+    for row in output:
+        snames.append(row[0].replace('\t', ' ').strip())
+        sids.append(row[1])
+
+    expected_sname = ['shaun', 'emilio', 'ossola', 'scruntus', 'figaro']
+    expected_sid = [62, 23, 61, 24, 35]
+    
+    assert (snames.sort(), sids.sort()) == (expected_sname.sort(), expected_sid.sort())
+
+def test_question4():
+    output = s.query(Boat.bname, 
+                     Boat.bid, 
+                     func.count(Reservation.bid)).join(Reservation).group_by(Boat.bname, Boat.bid).order_by((func.count(Reservation.bid)).desc()).limit(1).all()
+    
+    bnames = []
+    bids = []
+    count = []
+    for row in output:
+        bnames.append(row[0].replace('\t', ' ').strip())
+        bids.append(row[1])
+        bids.count(row[2])
+
+    expected_bname = ['Clipper']
+    expected_bid = [104]
+    expected_count = [5]
+
+    assert (bnames.sort(), bids.sort(), count.sort()) == (expected_bname.sort(), expected_bid.sort(), expected_count.sort())
+
+def test_question5():
+    total_reserves = s.query(Reservation.sid)
+    reserved_red = s.query(Reservation.sid).join(Boat).where(Boat.color == 'red')
+    exception = s.query(Sailor.sid, Sailor.sname).filter(Sailor.sid.in_(reserved_red))
+    output = s.query(Sailor.sid, Sailor.sname).join(Reservation).filter(Sailor.sid.in_(total_reserves)).except_(exception).all()
+    
+    snames = []
+    sids = []
+    for row in output:
+        snames.append(row[1].replace('\t', ' ').strip())
+        sids.append(row[0])
+
+    expected_sname = ['horatio', 'vin', 'jit']
+    expected_sid = [74, 90, 60]
+
+    assert (snames.sort(), sids.sort()) == (expected_sname.sort(), expected_sid.sort())
+
+def test_question6():
+    sailors_rated_10 = s.query(Sailor.sid, Sailor.sname, Sailor.age).where(Sailor.rating == 10).cte("sailors_rated_10")
+    output = s.query(func.avg(sailors_rated_10.c.age)).all()
+    
+    assert output[0][0] == 35.0000000000000000
