@@ -95,9 +95,8 @@ def test_question3():
     src = s.query(
         sct.c.sid, 
         sct.c.sname, 
-        func.count()).group_by(sct.c.sid, 
-                               sct.c.sname, 
-                               sct.c.color).having(sct.c.color == 'red').cte("src")
+        func.count()).where(sct.c.color == 'red').group_by(sct.c.sid, 
+                                                        sct.c.sname).cte("src")
 
     output = s.query(sct.c.sname, sct.c.sid).select_from(src).join(sct, src.c.sid == sct.c.sid).group_by(sct.c.sid, sct.c.sname, src.c.count).having(func.count(sct.c.sname) == src.c.count).all()
     
@@ -201,24 +200,24 @@ def test_question8():
         func.max(num_reserves_per_boat.c.count).over(
             partition_by=num_reserves_per_boat.c.bid).label('maximum')).subquery()
 
-    output = s.query(highest_num_res).where(highest_num_res.c.maximum == highest_num_res.c.count).all()
+    output = s.query(highest_num_res.c.bid, 
+                     highest_num_res.c.sid, 
+                     highest_num_res.c.sname, 
+                     highest_num_res.c.count).where(highest_num_res.c.maximum == highest_num_res.c.count).all()
     
     bids = []
     sids = []
     snames = []
     counts = []
-    maximums = []
     for row in output:
         bids.append(row[0])
         sids.append(row[1])
         snames.append(row[2].replace('\t', ' ').strip())
         counts.append(row[3])
-        maximums.append(row[4])
 
     expected_bids = [101, 101, 102, 102, 102, 103, 103, 103, 104, 104, 104, 104, 104, 105, 105, 105, 106, 107, 108, 109, 109, 109, 109, 110, 111, 112]
     expected_sids = [22, 64, 22, 31, 64, 22, 31, 74, 22, 23, 24, 31, 35, 23, 35, 59, 60, 88, 89, 59, 60, 89, 90, 88, 88, 61]
     expected_snames = ['dusting', 'horatio', 'dusting', 'lubber', 'horatio', 'dusting', 'lubber', 'horatio', 'dusting', 'emilio', 'scruntus', 'lubber', 'figaro', 'emilio', 'figaro', 'stum', 'jit', 'dan', 'dye', 'stum', 'jit', 'dye', 'vin', 'dan', 'dan', 'ossola']
     expected_counts = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 2, 1, 1]
-    expected_maximums = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 2, 1, 1]
-
-    assert (bids.sort(), sids.sort(), snames.sort(), counts.sort(), maximums.sort()) == (expected_bids.sort(), expected_sids.sort(), expected_snames.sort(), expected_counts.sort(), expected_maximums.sort())
+    
+    assert (bids.sort(), sids.sort(), snames.sort(), counts.sort()) == (expected_bids.sort(), expected_sids.sort(), expected_snames.sort(), expected_counts.sort())
