@@ -111,19 +111,33 @@ def test_question1():
         bids.append(row[1])
         count.append(row[2])
 
-    expected_bname = ['Interlake', 'Interlake', 'Clipper', 'Clipper', 'Marine', 'Marine', 'Marine', 'Driftwood', 'Driftwood', 'Klasper', 'Sooney', 'Sooney']
-    expected_bid = [101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112]
-    expected_count = [2, 3, 3, 5, 3, 3, 1, 1, 4, 3, 1, 1]
-
-    assert (bnames.sort(), bids.sort(), count.sort()) == (expected_bname.sort(), expected_bid.sort(), expected_count.sort())
-
+    with engine.connect() as connection:
+        expected_output = connection.execute(text("SELECT B.bname, B.bid, COUNT(*) " + 
+                                                  "FROM boats as B " +
+                                                  "INNER JOIN reserves as R ON R.bid = B.bid " +
+                                                  "GROUP BY B.bid " +
+                                                  "ORDER BY B.bid ASC"))
+    
+    assert expected_output.fetchall() == output
+    
 def test_question2():
     count = (s.query(func.count()).where(Boat.color == 'red').all())[0][0]
     output = s.query(
         Reservation.sid, 
         Sailor.sname).join(Boat).join(Sailor).where(Boat.color == 'red').group_by(Reservation.sid, Sailor.sname).having(func.count(Reservation.bid) == count).all()
 
-    assert output == []
+    with engine.connect() as connection:
+        expected_output = connection.execute(text("SELECT R.sid, S.sname " +
+                                                  "FROM reserves R " +
+                                                  "INNER JOIN boats B ON R.bid = B.bid " +
+                                                  "INNER JOIN sailors S on R.sid = S.sid " +
+                                                  "WHERE B.color = 'red' " +
+                                                  "GROUP BY R.sid, S.sname " +
+                                                  "HAVING COUNT(DISTINCT R.bid) = (SELECT COUNT(*) " +
+                                                                                   "FROM boats B " +
+                                                                                   "WHERE B.color = 'red')"))
+    
+    assert expected_output.fetchall() == output
 
 def test_question3():
     sct = s.query(
@@ -139,58 +153,68 @@ def test_question3():
 
     output = s.query(sct.c.sname, sct.c.sid).select_from(src).join(sct, src.c.sid == sct.c.sid).group_by(sct.c.sid, sct.c.sname, src.c.count).having(func.count(sct.c.sname) == src.c.count).all()
     
-    snames = [] 
-    sids = []
-    for row in output:
-        snames.append(row[0].replace('\t', ' ').strip())
-        sids.append(row[1])
-
-    expected_sname = ['shaun', 'emilio', 'ossola', 'scruntus', 'figaro']
-    expected_sid = [62, 23, 61, 24, 35]
+    with engine.connect() as connection:
+        expected_output = connection.execute(text("WITH sailor_color_table AS (SELECT R.sid, S.sname, B.color " +
+                                                                                "FROM reserves R " +
+                                                                                "INNER JOIN boats B ON R.bid = B.bid " +
+                                                                                "INNER JOIN sailors S on R.sid = S.sid), " + 
+                                                    "sailors_red_count AS (SELECT sailor_color_table.sid, sailor_color_table.sname, COUNT(*) " +
+                                                                           "FROM sailor_color_table " +
+                                                                           "WHERE sailor_color_table.color = 'red' " +
+                                                                           "GROUP BY sailor_color_table.sid, sailor_color_table.sname) " +
+                                                    "SELECT SCT.sname, SCT.sid " +
+                                                    "FROM sailors_red_count SRC " +
+                                                    "INNER JOIN sailor_color_table SCT on SCT.sid = SRC.sid " +
+                                                    "GROUP BY SCT.sid, SCT.sname, SRC.count " +
+                                                    "HAVING COUNT(SCT.sname) = SRC.count "))
     
-    assert (snames.sort(), sids.sort()) == (expected_sname.sort(), expected_sid.sort())
+    assert expected_output.fetchall() == output
 
 def test_question4():
     output = s.query(Boat.bname, 
                      Boat.bid, 
                      func.count(Reservation.bid)).join(Reservation).group_by(Boat.bname, Boat.bid).order_by((func.count(Reservation.bid)).desc()).limit(1).all()
     
-    bnames = []
-    bids = []
-    count = []
-    for row in output:
-        bnames.append(row[0].replace('\t', ' ').strip())
-        bids.append(row[1])
-        bids.count(row[2])
-
-    expected_bname = ['Clipper']
-    expected_bid = [104]
-    expected_count = [5]
-
-    assert (bnames.sort(), bids.sort(), count.sort()) == (expected_bname.sort(), expected_bid.sort(), expected_count.sort())
+    with engine.connect() as connection:
+        expected_output = connection.execute(text("SELECT B.bname, B.bid, COUNT(R.bid) " +
+                                                  "FROM boats B " +
+                                                  "INNER JOIN reserves R ON R.bid = B.bid " +
+                                                  "GROUP BY B.bname, B.bid " +
+                                                  "ORDER BY COUNT(R.bid) DESC " +
+                                                  "LIMIT 1"))
+    
+    assert expected_output.fetchall() == output
 
 def test_question5():
-    total_reserves = s.query(Reservation.sid)
     reserved_red = s.query(Reservation.sid).join(Boat).where(Boat.color == 'red')
     exception = s.query(Sailor.sid, Sailor.sname).filter(Sailor.sid.in_(reserved_red))
-    output = s.query(Sailor.sid, Sailor.sname).join(Reservation).filter(Sailor.sid.in_(total_reserves)).except_(exception).all()
-    
-    snames = []
-    sids = []
-    for row in output:
-        snames.append(row[1].replace('\t', ' ').strip())
-        sids.append(row[0])
+    output = s.query(Sailor.sid, Sailor.sname).except_(exception).all()
 
-    expected_sname = ['horatio', 'vin', 'jit']
-    expected_sid = [74, 90, 60]
+    with engine.connect() as connection:
+        expected_output = connection.execute(text("SELECT S.sid, S.sname " +
+                                                  "FROM sailors S " +
+                                                  "EXCEPT " +
+                                                  "SELECT S.sid, S.sname " +
+                                                  "FROM sailors S " +
+                                                  "WHERE S.sid IN (SELECT R.sid " +
+                                                                  "FROM reserves R " +
+                                                                  "INNER JOIN boats B ON R.bid = B.bid " +
+                                                                  "WHERE B.color = 'red')"))
 
-    assert (snames.sort(), sids.sort()) == (expected_sname.sort(), expected_sid.sort())
+    assert output == expected_output.fetchall()
 
 def test_question6():
     sailors_rated_10 = s.query(Sailor.sid, Sailor.sname, Sailor.age).where(Sailor.rating == 10).cte("sailors_rated_10")
     output = s.query(func.avg(sailors_rated_10.c.age)).all()
     
-    assert output[0][0] == 35.0000000000000000
+    with engine.connect() as connection:
+        expected_output = connection.execute(text("WITH sailors_rated10 AS (SELECT S.sid, S.sname, S.age " +
+                                                                            "FROM sailors S " +
+                                                                            "WHERE S.rating = 10) " +
+                                                    "SELECT AVG(S.age) " +
+                                                    "FROM sailors_rated10 S"))
+
+    assert output == expected_output.fetchall()
 
 def test_question7():
     youngest = s.query(
@@ -207,22 +231,15 @@ def test_question7():
         youngest.c.rating,
         youngest.c.age).where(youngest.c.age == youngest.c.youngestsailor).all()
     
-    snames = []
-    sids = []
-    ages = []
-    ratings = []
-    for row in output:
-        snames.append(row[0].replace('\t', ' ').strip())
-        sids.append(row[1])
-        ratings.append(row[2])
-        ages.append(row[3])
+    with engine.connect() as connection:
+        expected_output = connection.execute(text("WITH youngest AS (SELECT S.sid, S.sname, S.age, S.rating, MIN(S.age) " +
+                                                                    "OVER (PARTITION BY S.rating) " +
+                                                                    "AS YoungestSailor FROM sailors S) " +
+                                                 "SELECT Y.sname, Y.sid, Y.rating, Y.age " +
+                                                 "FROM youngest Y " +
+                                                 "WHERE Y.age = Y.youngestsailor"))
 
-    expected_sname = ['scruntus', 'brutus', 'art', 'dye', 'horatio', 'ossola', 'andy', 'stum', 'dan', 'horatio', 'jit', 'zorba', 'shaun', 'rusty']
-    expected_sid = [24, 29, 85, 89, 64, 61, 32, 59, 88, 74, 60, 71, 62, 58]
-    expected_ratings = [1, 1, 3, 3, 7, 7, 8, 8, 9, 9, 10, 10, 10, 10]
-    expected_ages = [33, 33, 25, 25, 16, 16, 25, 25, 25, 25, 35, 35, 35, 35]
-
-    assert (snames.sort(), sids.sort(), ages.sort(), ratings.sort()) == (expected_sname.sort(), expected_sid.sort(), expected_ratings.sort(), expected_ages.sort())
+    assert output == expected_output.fetchall()
 
 def test_question8():
     num_reserves_per_boat = s.query(
@@ -244,22 +261,19 @@ def test_question8():
                      highest_num_res.c.sname, 
                      highest_num_res.c.count).where(highest_num_res.c.maximum == highest_num_res.c.count).all()
     
-    bids = []
-    sids = []
-    snames = []
-    counts = []
-    for row in output:
-        bids.append(row[0])
-        sids.append(row[1])
-        snames.append(row[2].replace('\t', ' ').strip())
-        counts.append(row[3])
+    with engine.connect() as connection:
+        expected_output = connection.execute(text("WITH num_reserves_per_boat AS (SELECT R.bid, S.sid, S.sname, COUNT(*) " +
+                                                                                 "FROM sailors S " +
+                                                                                 "INNER JOIN reserves R ON S.sid = R.sid " +
+                                                                                 "GROUP BY R.bid, S.sid, S.sname) " +
+                                                 "SELECT bid, sid, sname, count " +
+                                                 "FROM " +
+                                                    "(SELECT N.bid, N.sid, N.sname, N.count, MAX(N.count) " +
+                                                    "OVER (PARTITION BY N.bid) " +
+                                                    "AS maximum FROM num_reserves_per_boat N) AS temp " +
+                                                 "WHERE temp.maximum = temp.count"))
 
-    expected_bids = [101, 101, 102, 102, 102, 103, 103, 103, 104, 104, 104, 104, 104, 105, 105, 105, 106, 107, 108, 109, 109, 109, 109, 110, 111, 112]
-    expected_sids = [22, 64, 22, 31, 64, 22, 31, 74, 22, 23, 24, 31, 35, 23, 35, 59, 60, 88, 89, 59, 60, 89, 90, 88, 88, 61]
-    expected_snames = ['dusting', 'horatio', 'dusting', 'lubber', 'horatio', 'dusting', 'lubber', 'horatio', 'dusting', 'emilio', 'scruntus', 'lubber', 'figaro', 'emilio', 'figaro', 'stum', 'jit', 'dan', 'dye', 'stum', 'jit', 'dye', 'vin', 'dan', 'dan', 'ossola']
-    expected_counts = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 2, 1, 1]
-    
-    assert (bids.sort(), sids.sort(), snames.sort(), counts.sort()) == (expected_bids.sort(), expected_sids.sort(), expected_snames.sort(), expected_counts.sort())
+    assert output == expected_output.fetchall()
 
 # I use this test to find all employees (id, name, role) that work on red boats
 def test_employees():
@@ -269,6 +283,8 @@ def test_employees():
         Employee.role).join(Boat).where(Boat.color == 'red').all()
     
     with engine.connect() as connection:
-        expected_output = connection.execute(text("SELECT * FROM employees INNER JOIN boats ON employees.bid = boats.bid WHERE boats.color = 'red'"))
+        expected_output = connection.execute(text("SELECT eid, ename, role FROM employees " +
+                                                  "INNER JOIN boats ON employees.bid = boats.bid " +
+                                                  "WHERE boats.color = 'red'"))
     
-    assert expected_output.fetchall().sort() == output.sort()
+    assert expected_output.fetchall() == output
