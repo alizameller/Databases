@@ -67,7 +67,7 @@ class Employee(Base):
         return "<Employee(id=%s, name='%s', salary='%s', role=%s, bid='%s')>" % (self.eid, self.ename, self.salary, self.role, self.bid)
 
 '''
-- I made a class for the table employees which keeps track of the employees who work with the boats
+- I made a class for the table employees which keeps track of the employees who work with the boats.
 - Every employee has a unique eid and works as some role on a specific boat 
 - I made the above class as a table with the following command:
 
@@ -102,14 +102,6 @@ def test_question1():
         Boat.bname, 
         Boat.bid, 
         func.count()).join(Reservation).group_by(Boat.bid).order_by(Boat.bid.asc()).all()
-    
-    bnames = [] 
-    bids = []
-    count = []
-    for row in output:
-        bnames.append(row[0].replace('\t', ' ').strip())
-        bids.append(row[1])
-        count.append(row[2])
 
     with engine.connect() as connection:
         expected_output = connection.execute(text("SELECT B.bname, B.bid, COUNT(*) " + 
