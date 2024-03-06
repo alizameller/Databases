@@ -53,8 +53,47 @@ class Reservation(Base):
     def __repr__(self):
         return "<Reservation(sid=%s, bid=%s, day=%s)>" % (self.sid, self.bid, self.day)
 
+# This is for part 3
+class Employee(Base):
+    __tablename__ = 'employees'
+
+    eid = Column(Integer, primary_key=True)
+    ename = Column(String)
+    salary = Column(Integer)
+    role = Column(String)
+    bid = Column(Integer, ForeignKey('boats.bid'))
+
+    def __repr__(self):
+        return "<Employee(id=%s, name='%s', salary='%s', role=%s, bid='%s')>" % (self.eid, self.ename, self.salary, self.role, self.bid)
+
+'''
+- I made a class for the table employees which keeps track of the employees who work with the boats
+- Every employee has a unique eid and works as some role on a specific boat 
+- I made the above class as a table with the following command:
+
+CREATE TABLE employees(eid int PRIMARY KEY, 
+                       ename varchar(30), 
+                       salary int, 
+                       role varchar(30), 
+                       bid int);
+
+I populated it with the following data using the following commands:
+insert into employees values (51,'david',30000,'cleaner', 110);
+insert into employees values (86,'serene',190000,'deckhand', 101);
+insert into employees values (23,'yuri',20000,'deckhand', 105);
+insert into employees values (78,'faith',8,'cleaner', 105);
+insert into employees values (69,'aliza',100,'deckhand', 107);
+insert into employees values (12,'john',35000,'operator', 104);
+insert into employees values (2,'david',170000,'operator', 106);
+insert into employees values (43,'brian',400,'operator', 110);
+insert into employees values (41,'evan',100000,'cleaner', 108);
+insert into employees values (27,'jakey',45000,'engineer', 101);
+insert into employees values (9,'lizelle',9000,'repairman', 102);
+insert into employees values (17,'jacob',15,'operator', 103);
+'''
+
 engine = create_engine(
-    "postgresql://alizameller:@localhost:5432/postgres_copy")
+    "postgresql://alizameller:@localhost:5432/postgres")
 Session = sessionmaker(bind=engine)
 s = Session()
 
@@ -221,3 +260,15 @@ def test_question8():
     expected_counts = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 2, 1, 1]
     
     assert (bids.sort(), sids.sort(), snames.sort(), counts.sort()) == (expected_bids.sort(), expected_sids.sort(), expected_snames.sort(), expected_counts.sort())
+
+# I use this test to find all employees (id, name, role) that work on red boats
+def test_employees():
+    output = s.query(
+        Employee.eid,
+        Employee.ename, 
+        Employee.role).join(Boat).where(Boat.color == 'red').all()
+    
+    with engine.connect() as connection:
+        expected_output = connection.execute(text("SELECT * FROM employees INNER JOIN boats ON employees.bid = boats.bid WHERE boats.color = 'red'"))
+    
+    assert expected_output.fetchall().sort() == output.sort()
