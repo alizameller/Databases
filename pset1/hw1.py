@@ -5,7 +5,7 @@ Modified for PSET1
 @alizameller
 
 Invoke using:
-$ pytest -s part2.py
+$ pytest -s hw1.py
 '''
 from __future__ import print_function
 import pytest
