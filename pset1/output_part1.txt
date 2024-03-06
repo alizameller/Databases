@@ -40,9 +40,15 @@
  sid |  sname  
 -----+---------
   74 | horatio
+  95 | bob
+  71 | zorba
+  85 | art
+  29 | brutus
+  58 | rusty
+  32 | andy
   90 | vin
   60 | jit
-(3 rows)
+(9 rows)
 
 /* Question 6 */
          avg         

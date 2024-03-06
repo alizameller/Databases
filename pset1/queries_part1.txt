@@ -42,9 +42,6 @@ LIMIT 1;
 /* Question 5 */
 SELECT S.sid, S.sname
 FROM sailors S
-INNER JOIN reserves R on S.sid = R.sid
-WHERE S.sid IN (SELECT R.sid 
-                FROM reserves R)
 EXCEPT
 SELECT S.sid, S.sname
 FROM sailors S
