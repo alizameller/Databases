@@ -1,0 +1,628 @@
++-------------------------------------------------------------------------+-------+
+| name                                                                    |   abv |
+|-------------------------------------------------------------------------+-------|
+| Mad River Maple Amber                                                   |   8   |
+| Maple Jacket                                                            |  14.4 |
+| Double Rainbow DIPA                                                     |   8.6 |
+| Cloudbusting #11                                                        |   8   |
+| Unsessionable                                                           |  10   |
+| On & On Part 3                                                          |  16.6 |
+| Doppel Valkyrie                                                         |   8.2 |
+| COLOSSAL: Anniversary Ale                                               |   9.8 |
+| Alley Oop                                                               |   8.2 |
+| Return of the Juice                                                     |   8   |
+| Pigeon Soup                                                             |   8   |
+| 4 EZ Payments                                                           |  10   |
+| Triple Broccoli                                                         |  10   |
+| G Is For Green                                                          |   8.5 |
+| Extra Tall Kiwi                                                         |   8.5 |
+| WE DIDN’T HAVE TO THINK TOO MUCH TO NAME THIS DOUBLE IPA                |   7.8 |
+| HOW ABOUT ONE OF YOUR PUG-TYPE BEER NAMES?                              |  11   |
+| SHERIDAN'S STOUT                                                        |   8   |
+| ET STAY HOME 19 - PINK GUAVA, MANGO, PINEAPPLE, SALT                    |   7.2 |
+| IN LEAP BEERS, I’VE ONLY HAD ONE                                        |   8.5 |
+| THE GREAT NORTHERN BARREL-AGED SERIES 41                                |  15   |
+| Crawling Out of the Fog                                                 |   8.8 |
+| Rush Moving Pictures 16.9 oz (Pre-Order)                                |  14   |
+| DDH Crome                                                               |   8   |
+| Curvy Tuesday                                                           |  13   |
+| Black Bouquet                                                           |   8   |
+| MC ^ GHOST                                                              |   8.5 |
+| Facing East                                                             |   7.3 |
+| Orographic Effect                                                       |   8.5 |
+| Blazed Green Relish                                                     |   8   |
+| Big Hearted IPA                                                         |   9.5 |
+| The Gilded Hand                                                         |  11.5 |
+| Barrel Aged Swamp Stacks (2023)                                         |  13   |
+| Regatta                                                                 |   7.3 |
+| In Two Pieces                                                           |   8   |
+| Step Dad Chaperone4                                                     |   8.5 |
+| Merciless Merciless                                                     |   8   |
+| Foeder-Lagered Rügen                                                    |   8.9 |
+| Humulus²                                                                |   8.5 |
+| Enjoy By 4.20.24                                                        |   9.4 |
+| The Beast of Both Worlds                                                |   8   |
+| Two Schulman's Walk Into A Brewery                                      |  10   |
+| Llamadeus                                                               |   8   |
+| Isosceles                                                               |   8   |
+| 10th Anniversary Imperial IPA (Brewed in Washington DC)                 |   8   |
+| BK 10th Anniversary                                                     |  10   |
+| Beyond The Void                                                         |   8.2 |
+| Motto Motto                                                             |   8.5 |
+| HELLO DOLLE                                                             |   8   |
+| The Serine                                                              |   8.8 |
+| Municipal Waste - Electrified Brain IPA                                 |   7.2 |
+| Gatherwell                                                              |  11   |
+| Voodoo Ranger Cashmerize IPA                                            |   7.5 |
+| Rocket 2 Ruin (12-Pack)                                                 |   9.5 |
+| 3 Fonteinen Aardbei Oogst 2022 (season 21|22) Blend No. 120             |   7.5 |
+| 3 Fonteinen Druif Spätburgunder (season 21|22) Blend No. 22             |   7.9 |
+| 3 Fonteinen Druif Muscaris (season 21|22) Blend No. 23                  |   8.3 |
+| Deth's Tar 2023                                                         |  14.8 |
+| Deth's Tar 2022                                                         |  14.8 |
+| Hop Bullet - Magnum Edition                                             |   9.5 |
+| Mokah                                                                   |  10   |
+| Shaded Sentry                                                           |  14.2 |
+| Dosvidanya Bourbon Barrel                                               |  12.5 |
+| Deth By Cherries                                                        |  14.3 |
+| Café Deth                                                               |  14.8 |
+| Life Jacket                                                             |  15   |
+| Voodoo Ranger Tropical Force IPA                                        |   9.5 |
+| Voodoo Ranger Fruit Force IPA                                           |   9.5 |
+| French Toast Framinghammer                                              |   9   |
+| Bourbon County Brand Stout (2023)                                       |  14.1 |
+| 3 Fonteinen Oude Geuze Cuvée Armand & Gaston (Season 22|23) Blend No. 5 |   7.2 |
+| Greens Tripel Ale                                                       |   8.5 |
+| Nitro Three Philosophers                                                |   9.7 |
+| DENSITY MATRIX (Nelson/Wai-iti/Riwaka)                                  |   7.5 |
+| Manhattan Shine                                                         |  12   |
+| Crust To Core (2021)                                                    |  15.5 |
+| The Barn Owl                                                            |  10.5 |
+| Major Science                                                           |   8.5 |
+| Oude Syrah Tilquin à l'Ancienne (2021-2022)                             |   8   |
+| Atomic Torpedo (12-Pack)                                                |   9.2 |
+| Lion Stout                                                              |   8.8 |
+| Tripel Ale                                                              |   9   |
+| Kentucky Bourbon Barrel Imperial Milk Stout                             |  12   |
+| Road 2 Ruin Double IPA (12-Pack)                                        |   8   |
+| Zombie Ice                                                              |   8.5 |
+| Dragons                                                                 |  10   |
+| Squeezebox                                                              |   8.6 |
+| Second Fiddle                                                           |   8.2 |
+| Built to Spill                                                          |   8   |
+| Sky Thing                                                               |   8   |
+| Galactic Vagabond                                                       |   9   |
+| Rush - Xanabrew 16.9 Oz                                                 |  10.5 |
+| Extra Hard Blue Slushie (19.2 oz)                                       |   8   |
+| Voodoo Ranger Juice Force Hazy Imperial IPA 19.2 oz                     |   9.5 |
+| Citrus Squall                                                           |   8   |
+| Gnomegang                                                               |   9.5 |
+| Sip Of Sunshine                                                         |   8   |
+| Sour Monkey 19.2 oz                                                     |   9.5 |
+| Regular Coffee                                                          |  12   |
+| Voodoo Ranger Fruit Force IPA 19.2 oz                                   |   9.5 |
+| Sour Monkey                                                             |   9.5 |
+| Double Pillow Hat                                                       |   9   |
+| Powder Jones                                                            |   7.3 |
+| The Piff                                                                |   8.6 |
+| French Toast                                                            |   8.6 |
+| Dark Chocolate Cherry Stout                                             |  10   |
+| Tidings                                                                 |   7.8 |
+| Goon Platoon                                                            |   8   |
+| A Little Sumpin' Sumpin' Ale                                            |   7.5 |
+| Wrench 19.2 oz                                                          |   7.1 |
+| Golden Monkey 19.2 oz                                                   |   9.5 |
+| Big Little Thing 19.2 oz                                                |   9   |
+| Maximus Colossal IPA                                                    |   9   |
+| Wake Up World Wide Stout                                                |  17   |
+| Cyber Scream                                                            |  10   |
+| All Hallow’s Treat                                                      |   7.6 |
+| Mastermind                                                              |   8.1 |
+| Midnight Snack (Rocky Road)                                             |  14   |
+| Bloom                                                                   |   8   |
+| The Shining                                                             |   8   |
+| Dark And Stormy Ale                                                     |  12.3 |
+| Zombie Fog                                                              |  10.6 |
+| Sloop West Coast                                                        |   7.2 |
+| dHop5                                                                   |   8   |
+| What's Past Is Present                                                  |   8.5 |
+| Prognosticator                                                          |   7.5 |
+| Experimental Jet Set                                                    |   9.2 |
+| Wrench NEIPA                                                            |   7.1 |
+| Voodoo Ranger Juice Force Hazy Imperial IPA                             |   9.5 |
+| Delirium Tremens Mini Keg                                               |   8.5 |
+| Can It Be All So Simple *Collab with The Answer*                        |   8.2 |
+| Waimea Waves                                                            |   8   |
+| Gamma Ray Blue                                                          |   8   |
+| Juicier Bomb                                                            |   8   |
+| Double Dale’s                                                           |   9   |
+| Black Dome                                                              |   8.8 |
+| Black Ops                                                               |  11.5 |
+| Oude Pinot Noir Tilquin à l'Ancienne (2021-2022) (750 mL)               |   8   |
+| Oude Riesling Tilquin à l'Ancienne (2021-2022) (750 mL)                 |   7.7 |
+| Oude Gewurzt Tilquin à l’Ancienne 2020-2021 (750 mL)                    |   8.4 |
+| Tilquin Pinot Gris                                                      |   8.4 |
+| 90 Minute IPA 19.2 oz                                                   |   9   |
+| Berry Monkey                                                            |  10   |
+| Everyday Fog                                                            |   7.1 |
+| Hand Truck Heroes                                                       |   8.2 |
+| Grapefruit Crush                                                        |   8   |
+| Torpedo Extra IPA (12-Pack)                                             |   7.2 |
+| Barrier Paper Bag Money IPA                                             |   8.1 |
+| Dragon Stout Fire                                                       |  10.2 |
+| Deliria                                                                 |   8.5 |
+| No Paranoia                                                             |   8   |
+| Morning Haze                                                            |   8   |
+| The Sixth Glass                                                         |  10.5 |
+| Deep Terra                                                              |   8.2 |
+| Coffee Coconut Stout                                                    |   8   |
+| Savants & Savages                                                       |   8.5 |
+| Spiritual Consultant                                                    |   7.5 |
+| Double Mind Haze                                                        |   8.2 |
+| Power Tools                                                             |   7.1 |
+| Belgian Style Quadrupel                                                 |  12   |
+| Nice Looking Chops                                                      |  10.5 |
+| Double Dry Hopped All Citra Everything                                  |   8.5 |
+| Delirium Tremens (11.2 oz)                                              |   8.5 |
+| Enso                                                                    |   8.2 |
+| El Zacaton                                                              |  12   |
+| dHop2                                                                   |   8.5 |
+| Energy Equals                                                           |   8   |
+| Double Dry Hopped  Mylar Bags                                           |   8.5 |
+| Harvester of Science                                                    |   8.5 |
+| Abraxas                                                                 |  10   |
+| Delay Pedal                                                             |  10   |
+| Orbital Elevator                                                        |   8.3 |
+| Kriek                                                                   |   7.5 |
+| Double Dry Hopped Broccoli                                              |   7.9 |
+| Fluctuation                                                             |   8.2 |
+| Tarrytown Dubbel                                                        |   8   |
+| Peak Buster Double IPA                                                  |   8   |
+| King Sue                                                                |   7.8 |
+| Jam Juice                                                               |   8   |
+| Heavy Imperial Stout                                                    |   9   |
+| Voodoo Ranger Juicy Haze IPA 19.2 oz                                    |   7.5 |
+| Cigar City Florida Man                                                  |   8.5 |
+| Plank Heller Weizenbock                                                 |   7.8 |
+| Captains Daughter 16oz                                                  |   8.5 |
+| Sensei                                                                  |  11.1 |
+| Curieux                                                                 |  11   |
+| Torpedo                                                                 |   7.2 |
+| Schneider Aventinus Weizen-Eisbock                                      |  12   |
+| Jai Alai IPA                                                            |   7.5 |
+| Second Fiddle                                                           |   8   |
+| Vanilla Abraxas                                                         |  11.5 |
+| Suicide Door                                                            |  10   |
+| Kinda Brooklyn                                                          |   8   |
+| Sorta Queens                                                            |   9   |
+| Golden Delicious                                                        |  11   |
+| White Russian Nitro                                                     |   8.9 |
+| Premium                                                                 |   7.6 |
+| Warlock                                                                 |   8.6 |
+| Black Boss Porter                                                       |   9.4 |
+| Delirium Nocturnum                                                      |   9   |
+| Green Yield                                                             |   7.2 |
+| MC2                                                                     |   8   |
+| Oh-J                                                                    |   8.1 |
+| Impact Wrench                                                           |  10   |
+| Dogs & Boats                                                            |   9.1 |
+| Bigfoot                                                                 |   9.6 |
+| Now Youse Can't Leave DIPA                                              |  10.1 |
+| Schneider Aventinus 16.9                                                |   8.2 |
+| Afterimage                                                              |   8   |
+| Delirium Tremens                                                        |   8   |
+| Cloud Drop                                                              |   8   |
+| Double Negative                                                         |  10   |
+| Rolling In Clouds                                                       |   7.1 |
+| IPA                                                                     |   7.2 |
+| Oscillation 30                                                          |   8   |
+| Lagunitas Little Sumpin' Sumpin' Ale                                    |   7.5 |
+| Chuckee Larmz                                                           |   9.1 |
+| Tripel Karmeliet                                                        |   8   |
+| Torque Wrench                                                           |   8   |
+| Pumpkin Barrel Ale                                                      |  10   |
+| Bliss                                                                   |   8   |
+| It's Complicated Being A Wizard                                         |   8   |
+| Coney Island Merman Cans                                                |   7.9 |
+| Pumking                                                                 |   8   |
+| 2XMAS                                                                   |   8   |
+| Tripel Reserve                                                          |   9   |
+| Wrench NEIPA                                                            |   7.1 |
+| Prairie Bomb!                                                           |  14   |
+| Voodoo Ranger Imperial IPA 19.2oz                                       |   9   |
+| Devil's Path IPA                                                        |   7.5 |
+| Softly Spoken Magic Spells                                              |   8.6 |
+| Experiments In the Kitchen                                              |  10   |
+| KBS                                                                     |  12   |
+| Space Dust IPA                                                          |   7.2 |
+| Satin Solitude                                                          |   7.5 |
+| Porter                                                                  |   7.2 |
+| Paulaner Salvator                                                       |   7.9 |
+| Whiskey Barrel Stout                                                    |  11.8 |
+| Madonna                                                                 |   8   |
+| Einstok Icelandic Wee Heavy                                             |   8   |
+| Tank 7                                                                  |   8.5 |
+| Trippel Belgian Style Ale                                               |   8.5 |
+| Two Juicy                                                               |   8.2 |
+| Bourbon Barrel Quad                                                     |  11.2 |
+| Biscotti Break                                                          |  11   |
+| Even More Jesus                                                         |  12   |
+| Arrogant Bastard Ale                                                    |   7.5 |
+| Lord Hobo Boom Sauce                                                    |   7.8 |
+| The Truth                                                               |   8.7 |
+| Road 2 Ruin                                                             |   8   |
+| Grey Sail Captain's Daughter 12oz                                       |   8.5 |
+| Golden Monkey                                                           |   9.5 |
+| Voodoo Ranger Juicy Haze IPA                                            |   7.5 |
+| Founders Breakfast Stout                                                |   8.3 |
+| Founders Centennial Ipa                                                 |   7.2 |
+| Founders Backwoods Bastard                                              |  10.2 |
+| Mc Chouffe                                                              |   8.5 |
+| Sour Monkey                                                             |   9.5 |
+| Joe Mamas Milk                                                          |   8   |
+| Gulden Draak 9000 Quad  11.2oz Bottles                                  |  10.5 |
+| Resin                                                                   |   9.1 |
+| Founders Dirty Bastard                                                  |   8.3 |
+| Augustiner Maximator                                                    |   7.5 |
+| Guinness Foreign Extra                                                  |   7.5 |
+| Triple Horse                                                            |  10   |
+| Lagunitas Little Sumpin                                                 |   7.3 |
+| 2XIPA                                                                   |   8.2 |
+| Raging Bitch                                                            |   8.3 |
+| Torpedo Extra IPA                                                       |   7.2 |
+| Dragon Stout                                                            |   7.5 |
+| Greens Quest Tripel Blonde Ale 16.9 oz (Gluten Free)                    |   8.5 |
+| Weihenstephaner Vitus                                                   |   7.7 |
+| Gulden Draak 11.2oz Bottles                                             |  10.5 |
+| Gulden Draak 750ml Bottle                                               |  10.5 |
+| La Chouffe                                                              |   8   |
+| Weihenstephaner Korbinian                                               |   7.4 |
+| Abt 12 4-Pack, 11.2oz Bottles                                           |  10.5 |
+| Prior 8                                                                 |   8   |
+| Tripel                                                                  |   8   |
+| Rochefort 6                                                             |   7.5 |
+| Westmalle Tripel 11.2oz                                                 |   9.5 |
+| Elephant Beer                                                           |   7.2 |
+| Orkney Skull Splitter                                                   |   8.5 |
+| Duvel 11.2oz Bottles                                                    |   8.5 |
+| Unibroue Trois Pistoles                                                 |   9   |
+| Maudite                                                                 |   8   |
+| Unibroue La Fin Du Monde                                                |   9   |
+| Delirium Tremens (750 mL)                                               |   8.5 |
+| Delirium Nocturnum (750 mL)                                             |   9   |
+| Flower Power                                                            |   8   |
+| Troegenator Doublebock                                                  |   8.2 |
+| Old Chub                                                                |   8   |
+| Lagunitas Maximus                                                       |   7.5 |
+| Three Philosophers                                                      |   9.8 |
+| 90 Minute Imperial IPA                                                  |   9   |
+| Three Philosophers                                                      |   9.8 |
+| Old Rasputin                                                            |   9   |
+| Abbey Ale                                                               |   8.5 |
+| Hennepin                                                                |   7.7 |
+| Golden Monkey                                                           |   9.5 |
+| Curieux Tripel                                                          |  11   |
+| GigaBoss                                                                |   9.5 |
+| Union Jack IPA                                                          |   7.5 |
+| Dragon's Milk                                                           |  10   |
+| Jai Alai                                                                |   7.5 |
+| Andechs Doppelbock (16.9 oz)                                            |   7.1 |
+| Duvel Tripel Hop                                                        |   9.5 |
+| Kentucky Bourbon Barrel Ale                                             |   8.2 |
+| Perpetual IPA                                                           |   7.5 |
++-------------------------------------------------------------------------+-------+
++--------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| name                                             | food_pairing                                                                                                                                                                                                                                           |
+|--------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Cloudbusting #11                                 | This Imperial IPA style beer is best paired with barbecue. Grilled meats, salmon and game all work well. It is also very good with peppery style cheeses such as Monterey / Pepper Jack.                                                               |
+| Unsessionable                                    | This Imperial IPA style beer is best paired with barbecue. Grilled meats, salmon and game all work well. It is also very good with peppery style cheeses such as Monterey / Pepper Jack.                                                               |
+| Doppel Valkyrie                                  | This Altbier style beer is best paired with German style food especially game, grilled meat and smoked meat as well as several cheeses including earthy style cheeses such as Camembert and Fontina.                                                   |
+| Valkyrie                                         | This Altbier style beer is best paired with German style food especially game, grilled meat and smoked meat as well as several cheeses including earthy style cheeses such as Camembert and Fontina.                                                   |
+| My Preferred Apocalypse                          | This Altbier style beer is best paired with German style food especially game, grilled meat and smoked meat as well as several cheeses including earthy style cheeses such as Camembert and Fontina.                                                   |
+| Return of the Juice                              | This Double/Imperial IPA style beer is best paired with barbecue,  and it goes great with other foods such as grilled meat, salmon and game and also is very good with cheese like Monterey, Pepper Jack, Blue or cheddar.                             |
+| Pigeon Soup                                      | This Imperial IPA style beer is best paired with barbecue. Grilled meats, salmon and game all work well. It is also very good with peppery style cheeses such as Monterey / Pepper Jack.                                                               |
+| Crawling Out of the Fog                          | This Imperial IPA style beer is best paired with barbecue. Grilled meats, salmon and game all work well. It is also very good with peppery style cheeses such as Monterey / Pepper Jack.                                                               |
+| Orographic Effect                                | This Imperial IPA style beer is best paired with barbecue. Grilled meats, salmon and game all work well. It is also very good with peppery style cheeses such as Monterey / Pepper Jack.                                                               |
+| Big Hearted IPA                                  | This Imperial IPA style beer is best paired with barbecue. Grilled meats, salmon and game all work well. It is also very good with peppery style cheeses such as Monterey / Pepper Jack.                                                               |
+| The Broken And the Dead (Coffee/Vanilla)         | This Brown Ale style beer is best paired with grilled meat and pork and also goes great with earthy style cheeses such as Camembert and Fontina and nutty style cheeses such as Asiago, Colby and Parmesan.                                            |
+| Foeder-Lagered Rügen                             | This Baltic Porter style beer is best paired with a variety of food styles including barbecue, game, grilled meat, and smoked meat style food especially beef as well as several cheeses including earthy style cheeses such as Camembert and Fontina. |
+| Humulus²                                         | This Imperial IPA style beer is best paired with barbecue. Grilled meats, salmon and game all work well. It is also very good with peppery style cheeses such as Monterey / Pepper Jack.                                                               |
+| Enjoy By 4.20.24                                 | This Imperial IPA style beer is best paired with barbecue. Grilled meats, salmon and game all work well. It is also very good with peppery style cheeses such as Monterey / Pepper Jack.                                                               |
+| Irish Cream Whale                                | This Brown Ale style beer is best paired with grilled meat and pork and also goes great with earthy style cheeses such as Camembert and Fontina and nutty style cheeses such as Asiago, Colby and Parmesan.                                            |
+| The Beast of Both Worlds                         | This Imperial IPA style beer is best paired with barbecue. Grilled meats, salmon and game all work well. It is also very good with peppery style cheeses such as Monterey / Pepper Jack.                                                               |
+| Llamadeus                                        | This Double/Imperial IPA style beer is best paired with barbecue,  and it goes great with other foods such as grilled meat, salmon and game and also is very good with cheese like Monterey, Pepper Jack, Blue or cheddar.                             |
+| Beyond The Void                                  | This Imperial IPA style beer is best paired with barbecue. Grilled meats, salmon and game all work well. It is also very good with peppery style cheeses such as Monterey / Pepper Jack.                                                               |
+| My Little Shadow                                 | This Dark Lager style beer is best paired with a variety of food styles including German, Latin American, beef, grilled meat, smoked meat, fish and shellfish.                                                                                         |
+| Hop Bullet - Magnum Edition                      | This Imperial IPA style beer is best paired with barbecue. Grilled meats, salmon and game all work well. It is also very good with peppery style cheeses such as Monterey / Pepper Jack.                                                               |
+| Up the Cherries Milk Stout                       | This Stout style beer is best paired with barbecue, in perticular beef, game, shellfish and smoked meats. It will also accompany buttery style cheeses such as Brie, Gouda, Havarti and Swiss, and chocolate desserts.                                 |
+| Inside Desires                                   | This Stout style beer is best paired with barbecue, in perticular beef, game, shellfish and smoked meats. It will also accompany buttery style cheeses such as Brie, Gouda, Havarti and Swiss, and chocolate desserts.                                 |
+| Hibercation                                      | This Porter style beer is best paired with barbecue in perticular beef, grilled/smoked meats and also buttery cheeses such as Brie, Gouda, Havarti and Swiss. Chocolate desserts will stand out the most.                                              |
+| French Toast Framinghammer                       | This Baltic Porter style beer is best paired with a variety of food styles including barbecue, game, grilled meat, and smoked meat style food especially beef as well as several cheeses including earthy style cheeses such as Camembert and Fontina. |
+| Vanilla Porter (12-Pack)                         | This Porter style beer is best paired with barbecue in perticular beef, grilled/smoked meats and also buttery cheeses such as Brie, Gouda, Havarti and Swiss. Chocolate desserts will stand out the most.                                              |
+| Nitro Three Philosophers                         | This Quadrupel (Quad) style beer is best paired with beef, game, and smoked meat and it also goes great with digestive for dessert and buttery style cheeses such as Brie, Gouda, Havarti and Swiss and sharp style cheeses such as Blue and Cheddar.  |
+| OP I RØG                                         | This Rauchbier style beer is best paired with barbecue and German cuisine especially beef, game, grilled/smoked meats, salmon, and also sharp style cheeses such as Blue or peppery style cheeses like Monterey.                                       |
+| Atomic Torpedo (12-Pack)                         | This Imperial IPA style beer is best paired with barbecue. Grilled meats, salmon and game all work well. It is also very good with peppery style cheeses such as Monterey / Pepper Jack.                                                               |
+| Lion Stout                                       | This Foreign Stout style beer is best paired with grilled and smoked meats and goes great with chocolate and digestive desserts.                                                                                                                       |
+| Organic Chocolate Stout                          | This Stout style beer is best paired with barbecue, in perticular beef, game, shellfish and smoked meats. It will also accompany buttery style cheeses such as Brie, Gouda, Havarti and Swiss, and chocolate desserts.                                 |
+| Road 2 Ruin Double IPA (12-Pack)                 | This Imperial IPA style beer is best paired with barbecue. Grilled meats, salmon and game all work well. It is also very good with peppery style cheeses such as Monterey / Pepper Jack.                                                               |
+| Zombie Ice                                       | This Imperial IPA style beer is best paired with barbecue. Grilled meats, salmon and game all work well. It is also very good with peppery style cheeses such as Monterey / Pepper Jack.                                                               |
+| Second Fiddle                                    | This Imperial IPA style beer is best paired with barbecue. Grilled meats, salmon and game all work well. It is also very good with peppery style cheeses such as Monterey / Pepper Jack.                                                               |
+| Built to Spill                                   | This Imperial IPA style beer is best paired with barbecue. Grilled meats, salmon and game all work well. It is also very good with peppery style cheeses such as Monterey / Pepper Jack.                                                               |
+| Sky Thing                                        | This Imperial IPA style beer is best paired with barbecue. Grilled meats, salmon and game all work well. It is also very good with peppery style cheeses such as Monterey / Pepper Jack.                                                               |
+| Galactic Vagabond                                | This Imperial IPA style beer is best paired with barbecue. Grilled meats, salmon and game all work well. It is also very good with peppery style cheeses such as Monterey / Pepper Jack.                                                               |
+| Sip Of Sunshine                                  | This Imperial IPA style beer is best paired with barbecue. Grilled meats, salmon and game all work well. It is also very good with peppery style cheeses such as Monterey / Pepper Jack.                                                               |
+| Leaning Chimney                                  | This Porter style beer is best paired with barbecue in perticular beef, grilled/smoked meats and also buttery cheeses such as Brie, Gouda, Havarti and Swiss. Chocolate desserts will stand out the most.                                              |
+| Karluv 13                                        | This Dark Lager style beer is best paired with a variety of food styles including German, Latin American, beef, grilled meat, smoked meat, fish and shellfish.                                                                                         |
+| A Dark Night (Gluten Free)                       | This Black IPA style beer is best paired with smoked meats or sharp cheeses. It can also be enjoyed with sweet desserts like cheesecake or creme brulee.                                                                                               |
+| Goon Platoon                                     | This Imperial IPA style beer is best paired with barbecue. Grilled meats, salmon and game all work well. It is also very good with peppery style cheeses such as Monterey / Pepper Jack.                                                               |
+| Big Little Thing 19.2 oz                         | This Imperial IPA style beer is best paired with barbecue. Grilled meats, salmon and game all work well. It is also very good with peppery style cheeses such as Monterey / Pepper Jack.                                                               |
+| Maximus Colossal IPA                             | This Imperial IPA style beer is best paired with barbecue. Grilled meats, salmon and game all work well. It is also very good with peppery style cheeses such as Monterey / Pepper Jack.                                                               |
+| Niu                                              | This Porter style beer is best paired with barbecue in perticular beef, grilled/smoked meats and also buttery cheeses such as Brie, Gouda, Havarti and Swiss. Chocolate desserts will stand out the most.                                              |
+| Mastermind                                       | This Imperial IPA style beer is best paired with barbecue. Grilled meats, salmon and game all work well. It is also very good with peppery style cheeses such as Monterey / Pepper Jack.                                                               |
+| Single Negative                                  | This Stout style beer is best paired with barbecue, in perticular beef, game, shellfish and smoked meats. It will also accompany buttery style cheeses such as Brie, Gouda, Havarti and Swiss, and chocolate desserts.                                 |
+| Dark And Stormy Ale                              | This Scottish Ale style beer is best paired with salmon or smoked meats, and also buttery style cheeses such as Brie, Gouda, Havarti and Swiss.                                                                                                        |
+| dHop5                                            | This Double/Imperial IPA style beer is best paired with barbecue,  and it goes great with other foods such as grilled meat, salmon and game and also is very good with cheese like Monterey, Pepper Jack, Blue or cheddar.                             |
+| What's Past Is Present                           | This Imperial IPA style beer is best paired with barbecue. Grilled meats, salmon and game all work well. It is also very good with peppery style cheeses such as Monterey / Pepper Jack.                                                               |
+| Gingerbread Stout                                | This Dry Stout style beer is best paired with barbecue or Latin American cuisine, particularly smoked meats. It can also accompany a wide array of chocolates.                                                                                         |
+| Can It Be All So Simple *Collab with The Answer* | This Imperial IPA style beer is best paired with barbecue. Grilled meats, salmon and game all work well. It is also very good with peppery style cheeses such as Monterey / Pepper Jack.                                                               |
+| Waimea Waves                                     | This Imperial IPA style beer is best paired with barbecue. Grilled meats, salmon and game all work well. It is also very good with peppery style cheeses such as Monterey / Pepper Jack.                                                               |
+| Gamma Ray Blue                                   | This Imperial IPA style beer is best paired with barbecue. Grilled meats, salmon and game all work well. It is also very good with peppery style cheeses such as Monterey / Pepper Jack.                                                               |
+| Double Dale’s                                    | This Imperial IPA style beer is best paired with barbecue. Grilled meats, salmon and game all work well. It is also very good with peppery style cheeses such as Monterey / Pepper Jack.                                                               |
+| Granola Brown Ale                                | This Brown Ale style beer is best paired with grilled meat and pork and also goes great with earthy style cheeses such as Camembert and Fontina and nutty style cheeses such as Asiago, Colby and Parmesan.                                            |
+| Original                                         | This Scottish Ale style beer is best paired with salmon or smoked meats, and also buttery style cheeses such as Brie, Gouda, Havarti and Swiss.                                                                                                        |
+| Grapefruit Crush                                 | This Imperial IPA style beer is best paired with barbecue. Grilled meats, salmon and game all work well. It is also very good with peppery style cheeses such as Monterey / Pepper Jack.                                                               |
+| Aecht Schlenkerla Rauchbier Marzen Mini Keg      | This Rauchbier style beer is best paired with barbecue and German cuisine especially beef, game, grilled/smoked meats, salmon, and also sharp style cheeses such as Blue or peppery style cheeses like Monterey.                                       |
+| Dragon Stout Fire                                | This Foreign Stout style beer is best paired with grilled and smoked meats and goes great with chocolate and digestive desserts.                                                                                                                       |
+| No Paranoia                                      | This Imperial IPA style beer is best paired with barbecue. Grilled meats, salmon and game all work well. It is also very good with peppery style cheeses such as Monterey / Pepper Jack.                                                               |
+| Morning Haze                                     | This Imperial IPA style beer is best paired with barbecue. Grilled meats, salmon and game all work well. It is also very good with peppery style cheeses such as Monterey / Pepper Jack.                                                               |
+| The Sixth Glass                                  | This Quadrupel (Quad) style beer is best paired with beef, game, and smoked meat and it also goes great with digestive for dessert and buttery style cheeses such as Brie, Gouda, Havarti and Swiss and sharp style cheeses such as Blue and Cheddar.  |
+| Guinness Extra Stout                             | This Dry Stout style beer is best paired with barbecue or Latin American cuisine, particularly smoked meats. It can also accompany a wide array of chocolates.                                                                                         |
+| Deep Terra                                       | This Imperial IPA style beer is best paired with barbecue. Grilled meats, salmon and game all work well. It is also very good with peppery style cheeses such as Monterey / Pepper Jack.                                                               |
+| Savants & Savages                                | This Imperial IPA style beer is best paired with barbecue. Grilled meats, salmon and game all work well. It is also very good with peppery style cheeses such as Monterey / Pepper Jack.                                                               |
+| Double Mind Haze                                 | This Imperial IPA style beer is best paired with barbecue. Grilled meats, salmon and game all work well. It is also very good with peppery style cheeses such as Monterey / Pepper Jack.                                                               |
+| Belgian Style Quadrupel                          | This Quadrupel (Quad) style beer is best paired with beef, game, and smoked meat and it also goes great with digestive for dessert and buttery style cheeses such as Brie, Gouda, Havarti and Swiss and sharp style cheeses such as Blue and Cheddar.  |
+| Double Dry Hopped All Citra Everything           | This Imperial IPA style beer is best paired with barbecue. Grilled meats, salmon and game all work well. It is also very good with peppery style cheeses such as Monterey / Pepper Jack.                                                               |
+| Enso                                             | This Imperial IPA style beer is best paired with barbecue. Grilled meats, salmon and game all work well. It is also very good with peppery style cheeses such as Monterey / Pepper Jack.                                                               |
+| dHop2                                            | This Imperial IPA style beer is best paired with barbecue. Grilled meats, salmon and game all work well. It is also very good with peppery style cheeses such as Monterey / Pepper Jack.                                                               |
+| Energy Equals                                    | This Imperial IPA style beer is best paired with barbecue. Grilled meats, salmon and game all work well. It is also very good with peppery style cheeses such as Monterey / Pepper Jack.                                                               |
+| Double Dry Hopped  Mylar Bags                    | This Imperial IPA style beer is best paired with barbecue. Grilled meats, salmon and game all work well. It is also very good with peppery style cheeses such as Monterey / Pepper Jack.                                                               |
+| Harvester of Science                             | This Imperial IPA style beer is best paired with barbecue. Grilled meats, salmon and game all work well. It is also very good with peppery style cheeses such as Monterey / Pepper Jack.                                                               |
+| Double Dry Hopped Broccoli                       | This Imperial IPA style beer is best paired with barbecue. Grilled meats, salmon and game all work well. It is also very good with peppery style cheeses such as Monterey / Pepper Jack.                                                               |
+| Fluctuation                                      | This Imperial IPA style beer is best paired with barbecue. Grilled meats, salmon and game all work well. It is also very good with peppery style cheeses such as Monterey / Pepper Jack.                                                               |
+| The Whale                                        | This Brown Ale style beer is best paired with grilled meat and pork and also goes great with earthy style cheeses such as Camembert and Fontina and nutty style cheeses such as Asiago, Colby and Parmesan.                                            |
+| Peak Buster Double IPA                           | This Imperial IPA style beer is best paired with barbecue. Grilled meats, salmon and game all work well. It is also very good with peppery style cheeses such as Monterey / Pepper Jack.                                                               |
+| Cigar City Florida Man                           | This Imperial IPA style beer is best paired with barbecue. Grilled meats, salmon and game all work well. It is also very good with peppery style cheeses such as Monterey / Pepper Jack.                                                               |
+| Plank Heller Weizenbock                          | This Weizenbock style beer is best paired with German foods specifically grilled meats. It also pairs well with chocolates for dessert.                                                                                                                |
+| Captains Daughter 16oz                           | This Imperial IPA style beer is best paired with barbecue. Grilled meats, salmon and game all work well. It is also very good with peppery style cheeses such as Monterey / Pepper Jack.                                                               |
+| Sweet Baby Jesus!                                | This Porter style beer is best paired with barbecue in perticular beef, grilled/smoked meats and also buttery cheeses such as Brie, Gouda, Havarti and Swiss. Chocolate desserts will stand out the most.                                              |
+| Lake Placid Ubu Ale Cans                         | This English Strong Ale style beer is best paired with curried dishes, grilled meats including pork and salmon, and also goes great with earthy style cheeses such as Camembert and Fontina and tangy style cheeses such as Brick and Edam.            |
+| Second Fiddle                                    | This Imperial IPA style beer is best paired with barbecue. Grilled meats, salmon and game all work well. It is also very good with peppery style cheeses such as Monterey / Pepper Jack.                                                               |
+| Kinda Brooklyn                                   | This Imperial IPA style beer is best paired with barbecue. Grilled meats, salmon and game all work well. It is also very good with peppery style cheeses such as Monterey / Pepper Jack.                                                               |
+| Sorta Queens                                     | This Imperial IPA style beer is best paired with barbecue. Grilled meats, salmon and game all work well. It is also very good with peppery style cheeses such as Monterey / Pepper Jack.                                                               |
+| Black Boss Porter                                | This Baltic Porter style beer is best paired with a variety of food styles including barbecue, game, grilled meat, and smoked meat style food especially beef as well as several cheeses including earthy style cheeses such as Camembert and Fontina. |
+| Guinness Draught                                 | This Dry Stout style beer is best paired with barbecue or Latin American cuisine, particularly smoked meats. It can also accompany a wide array of chocolates.                                                                                         |
+| Guinness Extra Stout                             | This Dry Stout style beer is best paired with barbecue or Latin American cuisine, particularly smoked meats. It can also accompany a wide array of chocolates.                                                                                         |
+| Guinness Extra Stout (22 oz)                     | This Dry Stout style beer is best paired with barbecue or Latin American cuisine, particularly smoked meats. It can also accompany a wide array of chocolates.                                                                                         |
+| Black And Tan                                    | This Porter style beer is best paired with barbecue in perticular beef, grilled/smoked meats and also buttery cheeses such as Brie, Gouda, Havarti and Swiss. Chocolate desserts will stand out the most.                                              |
+| MC2                                              | This Imperial IPA style beer is best paired with barbecue. Grilled meats, salmon and game all work well. It is also very good with peppery style cheeses such as Monterey / Pepper Jack.                                                               |
+| Trickster                                        | This Dark Lager style beer is best paired with a variety of food styles including German, Latin American, beef, grilled meat, smoked meat, fish and shellfish.                                                                                         |
+| Black Sheep                                      | This Brown Ale style beer is best paired with grilled meat and pork and also goes great with earthy style cheeses such as Camembert and Fontina and nutty style cheeses such as Asiago, Colby and Parmesan.                                            |
+| Oh-J                                             | This Imperial IPA style beer is best paired with barbecue. Grilled meats, salmon and game all work well. It is also very good with peppery style cheeses such as Monterey / Pepper Jack.                                                               |
+| Dogs & Boats                                     | This Imperial IPA style beer is best paired with barbecue. Grilled meats, salmon and game all work well. It is also very good with peppery style cheeses such as Monterey / Pepper Jack.                                                               |
+| Now Youse Can't Leave DIPA                       | This Imperial IPA style beer is best paired with barbecue. Grilled meats, salmon and game all work well. It is also very good with peppery style cheeses such as Monterey / Pepper Jack.                                                               |
+| Schneider Aventinus 16.9                         | This Weizenbock style beer is best paired with German foods specifically grilled meats. It also pairs well with chocolates for dessert.                                                                                                                |
+| Weihenstephaner Vitus                            | This Weizenbock style beer is best paired with German foods specifically grilled meats. It also pairs well with chocolates for dessert.                                                                                                                |
+| Afterimage                                       | This Imperial IPA style beer is best paired with barbecue. Grilled meats, salmon and game all work well. It is also very good with peppery style cheeses such as Monterey / Pepper Jack.                                                               |
+| Guinness Draught                                 | This Dry Stout style beer is best paired with barbecue or Latin American cuisine, particularly smoked meats. It can also accompany a wide array of chocolates.                                                                                         |
+| Cloud Drop                                       | This Imperial IPA style beer is best paired with barbecue. Grilled meats, salmon and game all work well. It is also very good with peppery style cheeses such as Monterey / Pepper Jack.                                                               |
+| Mean Old Tom                                     | This Stout style beer is best paired with barbecue, in perticular beef, game, shellfish and smoked meats. It will also accompany buttery style cheeses such as Brie, Gouda, Havarti and Swiss, and chocolate desserts.                                 |
+| Oscillation 30                                   | This Imperial IPA style beer is best paired with barbecue. Grilled meats, salmon and game all work well. It is also very good with peppery style cheeses such as Monterey / Pepper Jack.                                                               |
+| Watchstander Stout                               | This Stout style beer is best paired with barbecue, in perticular beef, game, shellfish and smoked meats. It will also accompany buttery style cheeses such as Brie, Gouda, Havarti and Swiss, and chocolate desserts.                                 |
+| Aecht Schlenkerla Rauchbier Urbock               | This Smoked style beer is best paired with barbecue, especially beef, game, salmon or other smoked meats. It will also pair well with peppery style cheeses such as Monterey / Pepper Jack and sharp style cheeses such as Blue and Cheddar.           |
+| Torque Wrench                                    | This Double/Imperial IPA style beer is best paired with barbecue,  and it goes great with other foods such as grilled meat, salmon and game and also is very good with cheese like Monterey, Pepper Jack, Blue or cheddar.                             |
+| Bliss                                            | This Imperial IPA style beer is best paired with barbecue. Grilled meats, salmon and game all work well. It is also very good with peppery style cheeses such as Monterey / Pepper Jack.                                                               |
+| Coney Island Merman Cans                         | This Imperial Pilsner style beer is best paired with curried dishes or Pan Asian cuisine. In particular dishes including game and grilled meats. It will also pair well with sharp style cheeses such as Blue and Cheddar.                             |
+| Long Trail Ale                                   | This Altbier style beer is best paired with German style food especially game, grilled meat and smoked meat as well as several cheeses including earthy style cheeses such as Camembert and Fontina.                                                   |
+| Broken Heart Stout                               | This Stout style beer is best paired with barbecue, in perticular beef, game, shellfish and smoked meats. It will also accompany buttery style cheeses such as Brie, Gouda, Havarti and Swiss, and chocolate desserts.                                 |
+| Voodoo Ranger Imperial IPA 19.2oz                | This Imperial IPA style beer is best paired with barbecue. Grilled meats, salmon and game all work well. It is also very good with peppery style cheeses such as Monterey / Pepper Jack.                                                               |
+| Fear Movie Lions                                 | This Double/Imperial IPA style beer is best paired with barbecue,  and it goes great with other foods such as grilled meat, salmon and game and also is very good with cheese like Monterey, Pepper Jack, Blue or cheddar.                             |
+| Smoke & Dagger                                   | This Smoked style beer is best paired with barbecue, especially beef, game, salmon or other smoked meats. It will also pair well with peppery style cheeses such as Monterey / Pepper Jack and sharp style cheeses such as Blue and Cheddar.           |
+| Softly Spoken Magic Spells                       | This Imperial IPA style beer is best paired with barbecue. Grilled meats, salmon and game all work well. It is also very good with peppery style cheeses such as Monterey / Pepper Jack.                                                               |
+| Helles Schlenkerla Lagerbier                     | This Rauchbier style beer is best paired with barbecue and German cuisine especially beef, game, grilled/smoked meats, salmon, and also sharp style cheeses such as Blue or peppery style cheeses like Monterey.                                       |
+| Robust Porter Cans                               | This Porter style beer is best paired with barbecue in perticular beef, grilled/smoked meats and also buttery cheeses such as Brie, Gouda, Havarti and Swiss. Chocolate desserts will stand out the most.                                              |
+| Maduro Brown Ale                                 | This Brown Ale style beer is best paired with grilled meat and pork and also goes great with earthy style cheeses such as Camembert and Fontina and nutty style cheeses such as Asiago, Colby and Parmesan.                                            |
+| Porter                                           | This Porter style beer is best paired with barbecue in perticular beef, grilled/smoked meats and also buttery cheeses such as Brie, Gouda, Havarti and Swiss. Chocolate desserts will stand out the most.                                              |
+| Velvet Panda                                     | This Stout style beer is best paired with barbecue, in perticular beef, game, shellfish and smoked meats. It will also accompany buttery style cheeses such as Brie, Gouda, Havarti and Swiss, and chocolate desserts.                                 |
+| Madonna                                          | This Double/Imperial IPA style beer is best paired with barbecue,  and it goes great with other foods such as grilled meat, salmon and game and also is very good with cheese like Monterey, Pepper Jack, Blue or cheddar.                             |
+| Einstok Toasted Porter Can                       | This Porter style beer is best paired with barbecue in perticular beef, grilled/smoked meats and also buttery cheeses such as Brie, Gouda, Havarti and Swiss. Chocolate desserts will stand out the most.                                              |
+| Einstok Icelandic Wee Heavy                      | This Scotch Ale style beer is best paired with salmon or smoked meats, and also buttery style cheeses such as Brie, Gouda, Havarti and Swiss.                                                                                                          |
+| Hazlenut Brown Nectar                            | This Brown Ale style beer is best paired with grilled meat and pork and also goes great with earthy style cheeses such as Camembert and Fontina and nutty style cheeses such as Asiago, Colby and Parmesan.                                            |
+| Bourbon Barrel Quad                              | This Quadrupel (Quad) style beer is best paired with beef, game, and smoked meat and it also goes great with digestive for dessert and buttery style cheeses such as Brie, Gouda, Havarti and Swiss and sharp style cheeses such as Blue and Cheddar.  |
+| Lord Hobo Boom Sauce                             | This Imperial IPA style beer is best paired with barbecue. Grilled meats, salmon and game all work well. It is also very good with peppery style cheeses such as Monterey / Pepper Jack.                                                               |
+| The Truth                                        | This Imperial IPA style beer is best paired with barbecue. Grilled meats, salmon and game all work well. It is also very good with peppery style cheeses such as Monterey / Pepper Jack.                                                               |
+| Road 2 Ruin                                      | This Imperial IPA style beer is best paired with barbecue. Grilled meats, salmon and game all work well. It is also very good with peppery style cheeses such as Monterey / Pepper Jack.                                                               |
+| Grey Sail Captain's Daughter 12oz                | This Imperial IPA style beer is best paired with barbecue. Grilled meats, salmon and game all work well. It is also very good with peppery style cheeses such as Monterey / Pepper Jack.                                                               |
+| Ellie's Brown Ale                                | This Brown Ale style beer is best paired with grilled meat and pork and also goes great with earthy style cheeses such as Camembert and Fontina and nutty style cheeses such as Asiago, Colby and Parmesan.                                            |
+| Founders Backwoods Bastard                       | This Scotch Ale style beer is best paired with salmon or smoked meats, and also buttery style cheeses such as Brie, Gouda, Havarti and Swiss.                                                                                                          |
+| Mc Chouffe                                       | This Scotch Ale style beer is best paired with salmon or smoked meats, and also buttery style cheeses such as Brie, Gouda, Havarti and Swiss.                                                                                                          |
+| Gulden Draak 9000 Quad  11.2oz Bottles           | This Quadrupel (Quad) style beer is best paired with beef, game, and smoked meat and it also goes great with digestive for dessert and buttery style cheeses such as Brie, Gouda, Havarti and Swiss and sharp style cheeses such as Blue and Cheddar.  |
+| Resin                                            | This Imperial IPA style beer is best paired with barbecue. Grilled meats, salmon and game all work well. It is also very good with peppery style cheeses such as Monterey / Pepper Jack.                                                               |
+| Goldstar                                         | This Dark Lager style beer is best paired with a variety of food styles including German, Latin American, beef, grilled meat, smoked meat, fish and shellfish.                                                                                         |
+| Founders Porter                                  | This Porter style beer is best paired with barbecue in perticular beef, grilled/smoked meats and also buttery cheeses such as Brie, Gouda, Havarti and Swiss. Chocolate desserts will stand out the most.                                              |
+| Founders Dirty Bastard                           | This Scotch Ale style beer is best paired with salmon or smoked meats, and also buttery style cheeses such as Brie, Gouda, Havarti and Swiss.                                                                                                          |
+| Vanilla Porter                                   | This Porter style beer is best paired with barbecue in perticular beef, grilled/smoked meats and also buttery cheeses such as Brie, Gouda, Havarti and Swiss. Chocolate desserts will stand out the most.                                              |
+| Guinness Foreign Extra                           | This Foreign Stout style beer is best paired with grilled and smoked meats and goes great with chocolate and digestive desserts.                                                                                                                       |
+| 2XIPA                                            | This Double/Imperial IPA style beer is best paired with barbecue,  and it goes great with other foods such as grilled meat, salmon and game and also is very good with cheese like Monterey, Pepper Jack, Blue or cheddar.                             |
+| Dragon Stout                                     | This Foreign Stout style beer is best paired with grilled and smoked meats and goes great with chocolate and digestive desserts.                                                                                                                       |
+| Murphy's Stout                                   | This Dry Stout style beer is best paired with barbecue or Latin American cuisine, particularly smoked meats. It can also accompany a wide array of chocolates.                                                                                         |
+| Weihenstephaner Vitus                            | This Weizenbock style beer is best paired with German foods specifically grilled meats. It also pairs well with chocolates for dessert.                                                                                                                |
+| Gulden Draak 11.2oz Bottles                      | This Quadrupel (Quad) style beer is best paired with beef, game, and smoked meat and it also goes great with digestive for dessert and buttery style cheeses such as Brie, Gouda, Havarti and Swiss and sharp style cheeses such as Blue and Cheddar.  |
+| Gulden Draak 750ml Bottle                        | This Quadrupel (Quad) style beer is best paired with beef, game, and smoked meat and it also goes great with digestive for dessert and buttery style cheeses such as Brie, Gouda, Havarti and Swiss and sharp style cheeses such as Blue and Cheddar.  |
+| Abt 12 4-Pack, 11.2oz Bottles                    | This Quadrupel (Quad) style beer is best paired with beef, game, and smoked meat and it also goes great with digestive for dessert and buttery style cheeses such as Brie, Gouda, Havarti and Swiss and sharp style cheeses such as Blue and Cheddar.  |
+| Oatmeal Stout                                    | This Stout style beer is best paired with barbecue, in perticular beef, game, shellfish and smoked meats. It will also accompany buttery style cheeses such as Brie, Gouda, Havarti and Swiss, and chocolate desserts.                                 |
+| Nut Brown Ale                                    | This Brown Ale style beer is best paired with grilled meat and pork and also goes great with earthy style cheeses such as Camembert and Fontina and nutty style cheeses such as Asiago, Colby and Parmesan.                                            |
+| Taddy Porter                                     | This Porter style beer is best paired with barbecue in perticular beef, grilled/smoked meats and also buttery cheeses such as Brie, Gouda, Havarti and Swiss. Chocolate desserts will stand out the most.                                              |
+| Old Chub                                         | This Scotch Ale style beer is best paired with salmon or smoked meats, and also buttery style cheeses such as Brie, Gouda, Havarti and Swiss.                                                                                                          |
+| Lagunitas Maximus                                | This Imperial IPA style beer is best paired with barbecue. Grilled meats, salmon and game all work well. It is also very good with peppery style cheeses such as Monterey / Pepper Jack.                                                               |
+| Three Philosophers                               | This Quadrupel (Quad) style beer is best paired with beef, game, and smoked meat and it also goes great with digestive for dessert and buttery style cheeses such as Brie, Gouda, Havarti and Swiss and sharp style cheeses such as Blue and Cheddar.  |
+| 90 Minute Imperial IPA                           | This Imperial IPA style beer is best paired with barbecue. Grilled meats, salmon and game all work well. It is also very good with peppery style cheeses such as Monterey / Pepper Jack.                                                               |
+| Old Brown Dog                                    | This Brown Ale style beer is best paired with grilled meat and pork and also goes great with earthy style cheeses such as Camembert and Fontina and nutty style cheeses such as Asiago, Colby and Parmesan.                                            |
+| Three Philosophers                               | This Quadrupel (Quad) style beer is best paired with beef, game, and smoked meat and it also goes great with digestive for dessert and buttery style cheeses such as Brie, Gouda, Havarti and Swiss and sharp style cheeses such as Blue and Cheddar.  |
+| Turbodog                                         | This Brown Ale style beer is best paired with grilled meat and pork and also goes great with earthy style cheeses such as Camembert and Fontina and nutty style cheeses such as Asiago, Colby and Parmesan.                                            |
+| GigaBoss                                         | This Imperial IPA style beer is best paired with barbecue. Grilled meats, salmon and game all work well. It is also very good with peppery style cheeses such as Monterey / Pepper Jack.                                                               |
+| Brown Ale                                        | This Brown Ale style beer is best paired with grilled meat and pork and also goes great with earthy style cheeses such as Camembert and Fontina and nutty style cheeses such as Asiago, Colby and Parmesan.                                            |
+| Porter                                           | This Porter style beer is best paired with barbecue in perticular beef, grilled/smoked meats and also buttery cheeses such as Brie, Gouda, Havarti and Swiss. Chocolate desserts will stand out the most.                                              |
+| Kalamazoo Stout                                  | This Stout style beer is best paired with barbecue, in perticular beef, game, shellfish and smoked meats. It will also accompany buttery style cheeses such as Brie, Gouda, Havarti and Swiss, and chocolate desserts.                                 |
+| Organic Chocolate Stout                          | This Stout style beer is best paired with barbecue, in perticular beef, game, shellfish and smoked meats. It will also accompany buttery style cheeses such as Brie, Gouda, Havarti and Swiss, and chocolate desserts.                                 |
+| Perpetual IPA                                    | This Imperial IPA style beer is best paired with barbecue. Grilled meats, salmon and game all work well. It is also very good with peppery style cheeses such as Monterey / Pepper Jack.                                                               |
++--------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++----------------------------------------+----------------+---------+
+| brewery                                | state          |   count |
+|----------------------------------------+----------------+---------|
+| Stone Brewing Co.                      | CA             |       2 |
+| Ballast Point Brewing Co               | CA             |       2 |
+| Lagunitas Brewing Company              | CA             |       2 |
+| Sierra Nevada Brewing Co               | CA             |       3 |
+| El Segundo Brewing                     | CA             |       1 |
+| Firestone Walker Brewing Company       | CA             |       2 |
+| 21st Amendment Brewery                 | CA             |       1 |
+| Flying Dog Brewery                     | CO             |       1 |
+| New Belgium Brewing Company            | CO             |       4 |
+| Beer'd Brewing Co                      | CT             |       1 |
+| Fat Orange Cat Brew Co                 | CT             |       1 |
+| Two Roads Brewing Company              | CT             |       3 |
+| Stone Brewing Co.                      | California     |       1 |
+| Firestone Walker Brewing Company       | California     |       1 |
+| Sierra Nevada Brewing Co               | California     |       8 |
+| Lagunitas Brewing Company              | California     |       7 |
+| New Belgium Brewing Company            | Colorado       |       9 |
+| Cerebral Brewing                       | Colorado       |       1 |
+| Weldwerks Brewing Co                   | Colorado       |       1 |
+| Two Roads Brewing Company              | Connecticut    |       3 |
+| New England Brewing Co                 | Connecticut    |       1 |
+| Alvarium Beer Company                  | Connecticut    |       1 |
+| Black Hog Brewing                      | Connecticut    |       2 |
+| Dogfish Head Brewery                   | DE             |       3 |
+| Dogfish Head Brewery                   | Delaware       |       2 |
+| Cigar City Brewing                     | FL             |       1 |
+| Cigar City Brewing                     | Florida        |       2 |
+| SweetWater Brewing Company             | Georgia        |       1 |
+| Kona Brewing Company                   | HI             |       1 |
+| Goose Island Beer Company              | IL             |       1 |
+| Phase Three Brewing                    | Illinois       |       2 |
+| Revolution Brewing                     | Illinois       |       1 |
+| Goose Island Beer Company              | Illinois       |       2 |
+| Hop Butcher For The World              | Illinois       |       1 |
+| 3 Floyds Brewery                       | Indiana        |       2 |
+| Toppling Goliath Brewing               | Iowa           |       1 |
+| Parish Brewing Co                      | Louisiana      |       1 |
+| Night Shift Brewing                    | MA             |       1 |
+| Lord Hobo Brewing                      | MA             |       1 |
+| Harpoon Brewery                        | MA             |       1 |
+| Flying Dog Brewery                     | MD             |       1 |
+| Maine Beer Company                     | ME             |       1 |
+| Lone Pine Brewery                      | ME             |       1 |
+| Bells Brewery                          | MI             |       4 |
+| Founders Brewing Co                    | MI             |       2 |
+| 21st Amendment Brewery                 | MN             |       1 |
+| Maine Beer Company                     | Maine          |       1 |
+| Lord Hobo Brewing                      | Massachusetts  |       3 |
+| Boston Beer Company                    | Massachusetts  |       1 |
+| Mighty Squirrel Brewing Co.            | Massachusetts  |       1 |
+| Vitamin Sea Brewing                    | Massachusetts  |       2 |
+| Bells Brewery                          | Michigan       |       3 |
+| Founders Brewing Co                    | Michigan       |       4 |
+| Brooklyn Brewery                       | NY             |       1 |
+| Captain Lawrence Brewing Company       | NY             |       3 |
+| Ithaca Beer Company                    | NY             |       1 |
+| Mill House Brewing Company             | NY             |       1 |
+| Newburgh Brewing Co                    | NY             |       3 |
+| KCBC (Kings County Brewers Collective) | NY             |       1 |
+| Industrial Arts Brewing Company        | NY             |       3 |
+| Montauk Brewing Company                | NY             |       2 |
+| Threes Brewing                         | NY             |       1 |
+| Bronx Brewery                          | NY             |       3 |
+| Equilibrium Brewery                    | NY             |       2 |
+| Singlecut Beersmiths                   | NY             |       3 |
+| Catskill Brewery                       | NY             |       1 |
+| Grimm Artisanal Ales Brewery           | NY             |       2 |
+| Southern Tier Brewing Company          | NY             |       2 |
+| Peak Organic Brewing Co                | NY             |       1 |
+| Sloop Brewing                          | NY             |       2 |
+| The Drowned Lands Brewery              | NY             |       1 |
+| Yonkers Brewing Company                | NY             |       1 |
+| Keegan Ales Brewery                    | NY             |       1 |
+| Finback Brewing                        | NY             |       6 |
+| Thin Man Brewery                       | NY             |       2 |
+| Departed Soles Brewing Company         | New Jersey     |       1 |
+| Two Villains                           | New Jersey     |       1 |
+| Greenport Brewing Co                   | New York       |       2 |
+| Broken Bow Brewery                     | New York       |       1 |
+| Ithaca Beer Company                    | New York       |       1 |
+| Threes Brewing                         | New York       |       3 |
+| Thin Man Brewery                       | New York       |       1 |
+| Sloop Brewing                          | New York       |       4 |
+| Singlecut Beersmiths                   | New York       |       3 |
+| Round Table Brewery                    | New York       |       1 |
+| Hudson Valley Brewery                  | New York       |       6 |
+| Catskill Brewery                       | New York       |       1 |
+| Southern Tier Brewing Company          | New York       |       1 |
+| The Drowned Lands Brewery              | New York       |       2 |
+| Barrier Brewing Co                     | New York       |       1 |
+| Brooklyn Brewery                       | New York       |       1 |
+| Industrial Arts Brewing Company        | New York       |       5 |
+| Finback Brewing                        | New York       |       3 |
+| Prison City Brewing Company            | New York       |       1 |
+| KCBC (Kings County Brewers Collective) | New York       |       4 |
+| Evil Twin Brewing                      | New York       |       4 |
+| Montauk Brewing Company                | New York       |       1 |
+| Sixpoint Brewing                       | New York       |       2 |
+| Community Beer Works                   | New York       |       2 |
+| Equilibrium Brewery                    | New York       |      19 |
+| Beer Tree Brewery                      | New York       |       1 |
+| Captain Lawrence Brewing Company       | New York       |       2 |
+| Peak Organic Brewing Co                | New York       |       1 |
+| Other Half Brewing                     | New York       |      20 |
+| Blue Point Brewing                     | New York       |       1 |
+| Wolf and Warrior Brewing               | New York       |       1 |
+| Yonkers Brewing Company                | New York       |       1 |
+| Short Throw Brewing                    | New York       |       1 |
+| Barclay Brewing Co                     | New York       |       1 |
+| R&H Brewing Co                         | New York       |       1 |
+| Grimm Artisanal Ales Brewery           | New York       |       7 |
+| Oskar Blues Grill & Brew               | North Carolina |       1 |
+| Drekker Brewing                        | North Dakota   |       2 |
+| Great Lakes Brewing Company            | Ohio           |       1 |
+| Rogue Ales                             | Oregon         |       1 |
+| Victory Brewing Company                | PA             |       1 |
+| Sixpoint Brewing                       | PA             |       2 |
+| Troegs Independent Brewing             | PA             |       2 |
+| Troegs Independent Brewing             | Pennsylvania   |       1 |
+| Abomination Brewing                    | Pennsylvania   |       2 |
+| Victory Brewing Company                | Pennsylvania   |       1 |
+| Ever Grain Brewing Co                  | Pennsylvania   |       1 |
+| Dancing Gnome Beer                     | Pennsylvania   |       1 |
+| Grey Sail Brewing                      | RI             |       1 |
+| Grey Sail Brewing                      | Rhode Island   |       1 |
+| Edmund's Oast Brewing Company          | South Carolina |       1 |
+| Burlington Beer Co                     | VT             |       1 |
+| Zero Gravity Craft Brewery             | VT             |       2 |
+| Upper Pass Brewery                     | VT             |       1 |
+| Fiddlehead Brewing                     | VT             |       2 |
+| Burlington Beer Co                     | Vermont        |       2 |
+| Hermit Thrush Brewery                  | Vermont        |       1 |
+| Lawson's Finest Liquids                | Vermont        |       5 |
+| Long Trail Brewery                     | Vermont        |       2 |
+| Zero Gravity Craft Brewery             | Vermont        |       3 |
+| Foam Brewers                           | Vermont        |       4 |
+| Fiddlehead Brewing                     | Vermont        |       2 |
+| Upper Pass Brewery                     | Vermont        |       1 |
+| Aslin Beer Co.                         | Virginia       |       2 |
+| The Veil Brewing Co.                   | Virginia       |       3 |
+| Elysian Brewing Co                     | WA             |       1 |
+| Ghostfish Brewing Co                   | WA             |       1 |
+| Ghostfish Brewing Co                   | Washington     |       1 |
+| Samuel Smith's Brewery                 |                |       1 |
+| BrewDog Brewery                        |                |       1 |
+| De Proef Brewery (Greens)              |                |       1 |
++----------------------------------------+----------------+---------+
